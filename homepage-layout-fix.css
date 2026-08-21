@@ -1,0 +1,18 @@
+/* Homepage six-card alignment */
+@media (min-width: 1101px) {
+  .hub-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+  .hub-card {
+    min-height: 170px !important;
+    padding: 20px !important;
+  }
+  .hub-card h3 {
+    font-size: 17px !important;
+  }
+  .hub-card p {
+    font-size: 10px !important;
+    line-height: 1.5 !important;
+  }
+}
