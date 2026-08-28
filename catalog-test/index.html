@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SALLAM TORQ — Catalog Integration Test</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0a0a0a}iframe{display:block;width:100%;height:100%;border:0}</style></head><body><iframe id="site" src="../index.html?v=5624d05" title="SALLAM TORQ"></iframe><script>
+const MODELS='models.html?v=4d43e982';
+const PARTS='racing-parts.html';
+const frame=document.getElementById('site');
+function wire(){
+  const d=frame.contentDocument;
+  if(!d)return;
+  d.querySelectorAll('a[href="#models"]').forEach(a=>{a.setAttribute('href','../'+MODELS);a.addEventListener('click',e=>{e.preventDefault();parent.location.href='../'+MODELS;});});
+  d.querySelectorAll('a[href="#parts"]').forEach(a=>{a.setAttribute('href','../'+PARTS);a.addEventListener('click',e=>{e.preventDefault();parent.location.href='../'+PARTS;});});
+}
+frame.addEventListener('load',wire);
+</script></body></html>
