@@ -2,7 +2,7 @@
 .hero small:first-child{font-size:0!important;letter-spacing:0!important}.hero small:first-child:after{content:'EGYPT × ITALY • BUILT FOR RIDERS';font-size:10px;letter-spacing:2.6px;color:#aaa;display:inline-block;font-weight:800}.logo{font-size:0!important;letter-spacing:0!important}.logo:after{content:'SA.TORQ';font-size:20px;letter-spacing:-.5px;font-weight:900;color:#f2f2f2}.logo span{display:none!important}
 /* Professional primary navigation */
 header{gap:20px!important}.logo:after{line-height:1}.logo:hover:after{color:#fff}nav{gap:clamp(12px,1.55vw,22px)!important;align-items:center!important}nav>a,nav .menu>a{white-space:nowrap!important;font-size:11px!important;letter-spacing:1.2px!important}nav>a:hover,nav .menu>a:hover{color:#fff!important}.menu{flex:0 0 auto!important}.cta{white-space:nowrap!important}
-@media(min-width:901px){nav>.menu:nth-child(1){order:1}nav>a:nth-child(2){order:2}nav>a:nth-child(3){order:3}nav>.menu:nth-child(4){order:4}nav>a:nth-child(5){order:5}nav>a:nth-child(6){order:6}nav>a:nth-child(7){order:7}}
+@media(min-width:901px){header nav>a:nth-child(1){order:1}header nav>a:nth-child(2){order:3}header nav>a:nth-child(3){order:4}header nav>a:nth-child(4){order:2}header nav>a:nth-child(5){order:5}header nav>a:nth-child(6){order:6}header nav>a:nth-child(7){order:7}}
 /* Remove only the retired R150 / R1000 presentation — keep all catalogs and cards intact. */
 #models>h2{font-size:0!important;line-height:.9!important}#models>h2:after{content:'THE\A PERFORMANCE LINEUP';white-space:pre;font-size:clamp(42px,6vw,86px);line-height:.9;color:#f2f2f2}
 /* Homepage hierarchy: each destination gets its own clear row instead of a crowded same-line block. */
