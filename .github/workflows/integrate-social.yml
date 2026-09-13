@@ -13,17 +13,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Add Social as final navigation item
-        shell: python
+      - name: Restore approved homepage and add Social only
+        shell: bash
         run: |
+          git fetch origin baseline-2026-09-09 --depth=1
+          git show FETCH_HEAD:index.html > index.html
+          python - <<'PY'
           from pathlib import Path
           p = Path('index.html')
           s = p.read_text(encoding='utf-8')
           old = '<a href="#brand">The Brand</a></nav>'
           new = '<a href="#brand">The Brand</a><a href="social.html">Social</a></nav>'
-          if 'href="social.html">Social</a></nav>' not in s and old in s:
-              s = s.replace(old, new, 1)
-              p.write_text(s, encoding='utf-8')
+          if old not in s:
+              raise SystemExit('Approved baseline navigation marker not found')
+          s = s.replace(old, new, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
 
       - name: Commit homepage update
         run: |
@@ -33,6 +38,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No homepage changes needed"
           else
-            git commit -m "Add Social to main navigation"
+            git commit -m "Restore approved homepage and add Social only"
             git push
           fi
