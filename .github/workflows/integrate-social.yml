@@ -54,6 +54,9 @@ jobs:
               s = s.replace('SALLAM TORQ', 'SA.TORQ')
               s = s.replace('SALLAM', 'SA.TORQ')
               s = s.replace('SA.TORQ TORQ', 'SA.TORQ')
+              s = s.replace('SA.TORQ <em>TORQ</em>', 'SA.TORQ')
+              s = s.replace('SA.TORQ <span>TORQ</span>', 'SA.TORQ')
+              s = s.replace('SA.TORQ%20TORQ', 'SA.TORQ')
               p.write_text(s, encoding='utf-8')
           PY
 
