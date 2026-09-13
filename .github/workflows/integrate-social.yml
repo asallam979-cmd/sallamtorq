@@ -1,4 +1,4 @@
-name: Integrate Social Catalog
+name: Integrate Social Navigation
 
 on:
   push:
@@ -13,25 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Add Social destination to homepage
+      - name: Add Social as final navigation item
         shell: python
         run: |
           from pathlib import Path
           p = Path('index.html')
           s = p.read_text(encoding='utf-8')
-          old = '<section id="hub" class="hub"><div class="hub-head"><div><small>EXPLORE SALLAM TORQ</small><h2 style="margin:12px 0 0;font-size:clamp(36px,5vw,66px)">ONE BRAND.<br><em>SIX WORLDS.</em></h2></div>'
-          new = '<section id="hub" class="hub"><div class="hub-head"><div><small>EXPLORE SALLAM TORQ</small><h2 style="margin:12px 0 0;font-size:clamp(36px,5vw,66px)">ONE BRAND.<br><em>SEVEN DESTINATIONS.</em></h2></div>'
-          if old in s:
+          old = '<a href="#brand">The Brand</a></nav>'
+          new = '<a href="#brand">The Brand</a><a href="social.html">Social</a></nav>'
+          if 'href="social.html">Social</a></nav>' not in s and old in s:
               s = s.replace(old, new, 1)
-          marker = '<a class="hub-card" data-mark="07" href="social.html">'
-          if marker not in s:
-              anchor = '<a class="hub-card" data-mark="03" href="service.html">'
-              social = '<a class="hub-card social-card" data-mark="03" href="social.html"><small>03 / CONNECT</small><h3>SOCIAL</h3><p>Instagram, TikTok, Facebook and direct WhatsApp channels for SALLAM TORQ.</p><span class="hub-arrow">↗</span></a>'
-              s = s.replace(anchor, social + anchor.replace('data-mark="03"', 'data-mark="04"'), 1)
-              s = s.replace('data-mark="04" href="performance-tuning.html"', 'data-mark="05" href="performance-tuning.html"', 1)
-              s = s.replace('data-mark="05" href="#faq"', 'data-mark="06" href="#faq"', 1)
-              s = s.replace('data-mark="06" href="#brand"', 'data-mark="07" href="#brand"', 1)
-          p.write_text(s, encoding='utf-8')
+              p.write_text(s, encoding='utf-8')
 
       - name: Commit homepage update
         run: |
@@ -41,6 +33,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No homepage changes needed"
           else
-            git commit -m "Add Social catalog to homepage"
+            git commit -m "Add Social to main navigation"
             git push
           fi
