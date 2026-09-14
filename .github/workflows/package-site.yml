@@ -1,0 +1,25 @@
+name: Package SA.TORQ Website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Create website ZIP
+        run: |
+          mkdir -p package/SA-TORQ-Website
+          rsync -a --exclude='.git' --exclude='package' --exclude='.github' ./ package/SA-TORQ-Website/
+          cd package
+          zip -r ../SA-TORQ-Website-FINAL.zip SA-TORQ-Website
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SA-TORQ-Website-FINAL
+          path: SA-TORQ-Website-FINAL.zip
+          retention-days: 30
