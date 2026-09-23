@@ -1,4 +1,4 @@
-# SALLAM TORQ — MASTER WEBSITE SOURCE OF TRUTH
+# SA.TORQ — MASTER WEBSITE SOURCE OF TRUTH
 
 **Version:** 2026-09-10  
 **Repository:** `asallam979-cmd/sallamtorq`  
@@ -9,7 +9,7 @@
 
 ## 1. PROJECT IDENTITY
 
-SALLAM TORQ is a modern powersports brand connecting Egypt and Italy, built around motorcycles, racing, performance, parts, scooters, jets/PWC, buggies/UTV and rider culture.
+SA.TORQ is a modern powersports brand connecting Egypt and Italy, built around motorcycles, racing, performance, parts, scooters, jets/PWC, buggies/UTV and rider culture.
 
 ### Brand direction
 - Premium, modern and professional.
@@ -62,7 +62,7 @@ Example:
 `https://wa.me/201118261116`
 
 ### Prefilled model message
-`Hello SALLAM TORQ, I am interested in [BRAND] [MODEL]. Please send me the price, availability and details.`
+`Hello SA.TORQ, I am interested in [BRAND] [MODEL]. Please send me the price, availability and details.`
 
 The model click must preserve the exact brand and model in the WhatsApp message.
 
@@ -131,7 +131,7 @@ The model click must preserve the exact brand and model in the WhatsApp message.
 - STAGE 2+
 
 ### WhatsApp message
-`Hello SALLAM TORQ, I am interested in [BRAND] [MODEL] [STAGE] performance tuning / ECU flash. Please send me the price, availability and details.`
+`Hello SA.TORQ, I am interested in [BRAND] [MODEL] [STAGE] performance tuning / ECU flash. Please send me the price, availability and details.`
 
 The selected **brand + model + exact stage** must be included in the prefilled WhatsApp message.
 
@@ -188,7 +188,7 @@ Purpose:
 - Direct sales support.
 - Performance-focused parts catalog.
 
-Keep the visual language consistent with SALLAM TORQ: professional, clean, racing-oriented.
+Keep the visual language consistent with SA.TORQ: professional, clean, racing-oriented.
 
 ---
 
@@ -217,11 +217,23 @@ FAQ should answer practical questions around:
 Homepage destination:
 `#brand`
 
-Brand message should preserve the Egypt × Italy vision and the idea of a new-generation powersports brand built around riders, performance and culture.
+Brand message: SA.TORQ is an Egyptian-born powersports brand connecting riders, machines, performance and culture. The project starts from Egypt, connects with Italy, and has an international mindset. The core ecosystem is Models, Parts, Service, Performance Tuning and Riders. SA.TORQ is not presented as an Italian company; Italy is the connection/market/network dimension of the project.
 
 ---
 
-## 9. SOCIAL PREVIEW — SAVED SEPARATELY
+## 9. RIDER TRAINING
+
+The Riders section now includes a Rider Training destination for beginners or people who are not yet confident riding. The page/site should direct enquiries to Egypt WhatsApp and ask about availability rather than inventing a fixed training schedule.
+
+## 10. COMING SOON
+
+Features not being launched yet should be visibly marked **COMING SOON** rather than presented as currently available. Current roadmap items shown on the homepage:
+- Online Store / digital checkout.
+- Dealer & partner network.
+- Wider Egypt × Italy × international network operations.
+- Future rider digital/community platform.
+
+## 11. SOCIAL PREVIEW — SAVED SEPARATELY
 
 ### File
 `social-preview.html`
@@ -246,11 +258,11 @@ WhatsApp Italy:
 `https://wa.me/393934223666`
 
 ### Social visual rule
-The website shell can remain black/red, while the social platform cards use recognizable natural platform colors rather than forcing everything into SALLAM TORQ red.
+The website shell can remain black/red, while the social platform cards use recognizable natural platform colors rather than forcing everything into SA.TORQ red.
 
 ---
 
-## 10. CONTACT DESTINATIONS
+## 12. CONTACT DESTINATIONS
 
 ### Egypt Sales WhatsApp
 `https://wa.me/201118261116`
@@ -262,7 +274,7 @@ Do not replace these numbers unless explicitly requested.
 
 ---
 
-## 11. CURRENT REPOSITORY FILE INVENTORY
+## 13. CURRENT REPOSITORY FILE INVENTORY
 
 - `index.html`
 - `styles.css`
@@ -287,7 +299,7 @@ Some older/experimental files remain in the repository. Do not use an old experi
 
 ---
 
-## 12. PRODUCTION SOURCE OF TRUTH
+## 14. PRODUCTION SOURCE OF TRUTH
 
 ### Main branch
 `main`
@@ -308,7 +320,7 @@ Never rebuild `index.html` from memory after a destructive edit.
 
 ---
 
-## 13. IMPORTANT DEVELOPMENT RULES
+## 15. IMPORTANT DEVELOPMENT RULES
 
 ### Never break these approved flows
 - Models → Catalog → Model → WhatsApp.
@@ -337,9 +349,9 @@ The website's production copy is English unless a bilingual version is explicitl
 
 ---
 
-## 14. FUTURE DEVELOPMENT DIRECTION
+## 16. FUTURE DEVELOPMENT DIRECTION
 
-SALLAM TORQ can later expand into:
+SA.TORQ can later expand into:
 - More verified motorcycle models.
 - More racing parts.
 - More ECU/performance packages.
@@ -355,12 +367,12 @@ Every new feature should be layered on top of the approved baseline rather than 
 
 ---
 
-## 15. QUICK HANDOVER SUMMARY
+## 17. QUICK HANDOVER SUMMARY
 
 If another developer/AI takes over the project, the instructions are:
 
-> Build SALLAM TORQ from the `baseline-2026-09-09` foundation. Keep the premium black/red racing identity. Models must go directly from the catalog to Egypt WhatsApp with the exact selected model in the message. Performance Tuning must go from model selection to Full Tune / Stage 1 / Stage 2 / Stage 2+ and then directly to WhatsApp with the exact model and stage. Service is finished and locked; do not change it unless explicitly requested. Keep Social Preview separate. Use the existing repository files as the production source of truth and do not reconstruct the homepage from memory.
+> Build SA.TORQ from the `baseline-2026-09-09` foundation. Keep the premium black/red racing identity. Models must go directly from the catalog to Egypt WhatsApp with the exact selected model in the message. Performance Tuning must go from model selection to Full Tune / Stage 1 / Stage 2 / Stage 2+ and then directly to WhatsApp with the exact model and stage. Service is finished and locked; do not change it unless explicitly requested. Keep Social Preview separate. Use the existing repository files as the production source of truth and do not reconstruct the homepage from memory.
 
 ---
 
-**END OF SALLAM TORQ MASTER FILE**
+**END OF SA.TORQ MASTER FILE**
