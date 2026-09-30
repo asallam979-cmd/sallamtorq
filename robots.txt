@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asallam979-cmd.github.io/sallamtorq/sitemap.xml
