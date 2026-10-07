@@ -36,3 +36,10 @@ footer strong{font-size:0!important}footer strong:after{content:'SA.TORQ';font-s
 #riders .rider-group,#service .service-card,#training .rider-training{background:rgba(8,8,8,.72)!important;backdrop-filter:blur(3px);border-color:rgba(255,255,255,.13)!important}
 #riders .rider-group:hover{background:rgba(15,15,15,.82)!important}
 @media(max-width:600px){.hero{min-height:calc(100vh - 64px)!important;background-position:center!important}#riders,#service,#training{background-position:center!important}}
+
+/* SA.TORQ — HOMEPAGE CINEMATIC BACKGROUND FINAL / 2026-10-07 */
+#home.hero{background-image:url('assets/hero-background.webp?v=20261007-home-final-2')!important;background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;background-color:#000!important;}
+#home.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.08) 48%,rgba(0,0,0,.04) 100%);pointer-events:none;z-index:0!important;}
+#home.hero>div{position:relative!important;z-index:2!important;}
+#home.hero .ghost{z-index:1!important;color:rgba(0,0,0,.16)!important;}
+@media(max-width:600px){#home.hero{background-size:cover!important;background-position:center center!important;}}
