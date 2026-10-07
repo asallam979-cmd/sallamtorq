@@ -25,3 +25,14 @@ footer strong{font-size:0!important}footer strong:after{content:'SA.TORQ';font-s
 @media(max-width:600px){.section:before{display:none!important}.hero small:first-child:after{font-size:9px;letter-spacing:1.8px}.header-search input{width:auto;flex:1}.cta{display:none}.hub-card{padding:22px 5%!important;grid-template-columns:58px 1fr 40px!important}.hub-card p{display:none!important}.rider-groups{grid-template-columns:1fr}.rider-group{min-height:220px;padding:23px}.rider-group h3{font-size:27px}.riders-note{display:grid;grid-template-columns:1fr}}
 
 /* SA.TORQ HOME BACKGROUND — 2026-10-06 */
+
+
+/* SA.TORQ — GLOBAL RIDER WORLDS BACKGROUND / 2026-10-07 */
+/* The same cinematic visual language is carried from the first screen into Riders, Service and Training. */
+.hero{min-height:calc(100vh - 72px)!important;background:linear-gradient(90deg,rgba(5,5,5,.78) 0%,rgba(5,5,5,.42) 48%,rgba(5,5,5,.28) 100%),url('assets/hero-background.jpg?v=20261007-rider-worlds') center/cover no-repeat!important;background-attachment:scroll!important}
+#riders,#service,#training{position:relative!important;overflow:hidden!important;background:linear-gradient(90deg,rgba(5,5,5,.92) 0%,rgba(5,5,5,.78) 50%,rgba(5,5,5,.88) 100%),url('assets/hero-background.jpg?v=20261007-rider-worlds') center/cover no-repeat!important}
+#riders:before,#service:before,#training:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.64));pointer-events:none;z-index:0}
+#riders>* ,#service>* ,#training>*{position:relative;z-index:1}
+#riders .rider-group,#service .service-card,#training .rider-training{background:rgba(8,8,8,.72)!important;backdrop-filter:blur(3px);border-color:rgba(255,255,255,.13)!important}
+#riders .rider-group:hover{background:rgba(15,15,15,.82)!important}
+@media(max-width:600px){.hero{min-height:calc(100vh - 64px)!important;background-position:center!important}#riders,#service,#training{background-position:center!important}}
