@@ -43,3 +43,16 @@ footer strong{font-size:0!important}footer strong:after{content:'SA.TORQ';font-s
 #home.hero>div{position:relative!important;z-index:2!important;}
 #home.hero .ghost{z-index:1!important;color:rgba(0,0,0,.16)!important;}
 @media(max-width:600px){#home.hero{background-size:cover!important;background-position:center center!important;}}
+
+/* SA.TORQ MASTER PAGE VISUAL SYSTEM — 2026-10-07 */
+#models,#parts,#training,#service,#tuning,#faq{position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.58),rgba(0,0,0,.28) 52%,rgba(0,0,0,.62)),url('assets/hero-background.webp?v=20261007-sections') center/cover fixed no-repeat!important}
+#models:before,#parts:before,#training:before,#service:before,#tuning:before,#faq:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.72));pointer-events:none;z-index:0}
+#models>*,#parts>*,#training>*,#service>*,#tuning>*,#faq>*{position:relative;z-index:1}
+#models .models-hero,#parts .parts-hero,#service .service-hero,#tuning .tuning-hero,#faq .faq-hero,#training .rider-training{background:rgba(8,8,8,.72)!important;backdrop-filter:blur(7px)!important;border-color:rgba(255,255,255,.16)!important;box-shadow:0 20px 60px rgba(0,0,0,.25)!important}
+#models .models-grid article,#parts .category-hub a,#service .service-card,#tuning .tuning-card,#faq details{background:rgba(10,10,10,.76)!important;backdrop-filter:blur(5px)!important;border-color:rgba(255,255,255,.13)!important}
+#models .models-grid article:hover,#parts .category-hub a:hover,#service .service-card:hover,#tuning .tuning-card:hover{border-color:#e10600!important;transform:translateY(-3px)!important}
+#training .rider-training-btn,#models .main-arrow,#parts .main-arrow,#service .main-arrow,#tuning .main-arrow,#faq .main-arrow{border-color:#555!important}
+#training .rider-training-btn:hover,#models .main-arrow:hover,#parts .main-arrow:hover,#service .main-arrow:hover,#tuning .main-arrow:hover,#faq .main-arrow:hover{background:#e10600!important;border-color:#e10600!important}
+#faq .faq-list{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+#faq details{padding:20px 22px!important;border:1px solid rgba(255,255,255,.13)!important}#faq summary{cursor:pointer;font-weight:800;font-size:12px;letter-spacing:.4px}#faq details p{color:#888;font-size:11px;line-height:1.75;margin:14px 0 0}
+@media(max-width:800px){#faq .faq-list{grid-template-columns:1fr}}
