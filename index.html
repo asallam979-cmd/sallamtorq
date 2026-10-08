@@ -95,4 +95,42 @@
 <section id="brand" class="section dark"><small>THE BRAND</small><h2>BUILT WITH<br><em>PURPOSE.</em></h2><div class="brand-hero"><small>SA.TORQ</small><div class="brand-copy"><p><strong>SA.TORQ — ALL YOU NEED FOR RIDERS &amp; BIKES.</strong> The idea is simple: one destination for the rider, the bike and everything around the ride.</p><p>SA.TORQ starts from <strong>Egypt</strong>, connects with <strong>Italy</strong>, and is built with an international mindset. The platform brings together models, parts, service, performance tuning, rider community and sourcing in one clear ecosystem.</p><p>The vision is bigger than one motorcycle category: <strong>street, sport, naked, cruiser, adventure, touring, racing, scooters, electric mobility, jets and buggies</strong> — with rider training for anyone who wants to learn a specific type of bike.</p></div><div class="brand-points"><span>ALL YOU NEED FOR RIDERS &amp; BIKES</span><span>🇪🇬 EGYPT</span><span>🇮🇹 ITALY</span><span>🏁 PERFORMANCE DNA</span><span>🏍️ RIDER CULTURE</span><span>🌍 INTERNATIONAL VISION</span></div></div></section>
 <section id="test" class="section"><small>CONTACT SALES</small><h2>CALL FOR<br><em>PRICE.</em></h2><p style="color:#888;max-width:650px">For parts price, availability and exact fitment, contact SA.TORQ sales directly.</p><div class="contact-box"><a class="button" href="https://wa.me/201118261116" target="_blank" rel="noopener">WHATSAPP EGYPT SALES</a><a class="button" href="https://wa.me/393934223666" target="_blank" rel="noopener">WHATSAPP ITALY SALES</a></div></section>
 <footer><strong>SA.TORQ</strong><span class="note">© 2026 SA.TORQ • EGYPT × ITALY • RACING PARTS • PERFORMANCE TUNING</span><a href="https://wa.me/201118261116" target="_blank">🇪🇬 SALES →</a><a href="https://wa.me/393934223666" target="_blank">🇮🇹 SALES →</a></footer>
-<script>const searchItems=[['Models','Motorcycles, racing, jets, buggies and scooters','models-catalog.html'],['Parts','Racing parts and custom requests','#parts'],['Service','Workshop and powersports service','service.html'],['Performance Tuning','ECU flash, exhaust, electronics and chassis','performance-tuning.html'],['FAQ','Fitment, ordering, quotation and support','#faq'],['The Brand','SA.TORQ vision and identity','#brand'],['Racing Parts','Racing parts catalogue','racing-parts.html'],['BMW S1000RR','BMW racing parts','racing-parts.html']];function toggleSearch(){const p=document.getElementById('searchPanel');p.classList.toggle('show');if(p.classList.contains('show'))document.getElementById('siteSearch').focus()}function searchSite(){const q=document.getElementById('siteSearch').value.trim().toLowerCase(),box=document.getElementById('searchResults');if(!q){box.classList.remove('show');box.innerHTML='';return}const hits=searchItems.filter(x=>(x[0]+' '+x[1]).toLowerCase().includes(q));box.innerHTML=hits.length?hits.map(x=>`<a href="${x[2]}"><strong>${x[0]}</strong><br><small>${x[1]}</small></a>`).join(''):'<a>No matching result — contact sales for sourcing.</a>';box.classList.add('show')}document.getElementById('siteSearch').addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.addEventListener('click',e=>{if(!e.target.closest('.search-panel')&&!e.target.closest('.search-icon'))document.getElementById('searchResults').classList.remove('show')});</script></body></html>
+<script>const searchItems=[['Models','Motorcycles, racing, jets, buggies and scooters','models-catalog.html'],['Parts','Racing parts and custom requests','#parts'],['Service','Workshop and powersports service','service.html'],['Performance Tuning','ECU flash, exhaust, electronics and chassis','performance-tuning.html'],['FAQ','Fitment, ordering, quotation and support','#faq'],['The Brand','SA.TORQ vision and identity','#brand'],['Racing Parts','Racing parts catalogue','racing-parts.html'],['BMW S1000RR','BMW racing parts','racing-parts.html']];function toggleSearch(){const p=document.getElementById('searchPanel');p.classList.toggle('show');if(p.classList.contains('show'))document.getElementById('siteSearch').focus()}function searchSite(){const q=document.getElementById('siteSearch').value.trim().toLowerCase(),box=document.getElementById('searchResults');if(!q){box.classList.remove('show');box.innerHTML='';return}const hits=searchItems.filter(x=>(x[0]+' '+x[1]).toLowerCase().includes(q));box.innerHTML=hits.length?hits.map(x=>`<a href="${x[2]}"><strong>${x[0]}</strong><br><small>${x[1]}</small></a>`).join(''):'<a>No matching result — contact sales for sourcing.</a>';box.classList.add('show')}document.getElementById('siteSearch').addEventListener('keydown',e=>{if(e.key==='Enter')searchSite()});document.addEventListener('click',e=>{if(!e.target.closest('.search-panel')&&!e.target.closest('.search-icon'))document.getElementById('searchResults').classList.remove('show')});</script>
+<style id="satorq-responsive-home">
+/* SA.TORQ RESPONSIVE HOME IMAGE — FINAL */
+#home.satorq-master-home{
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  min-height:100svh!important;
+  height:100svh!important;
+  width:100%!important;
+  padding:70px 0 0!important;
+  background-color:#050505!important;
+}
+@media (max-width:900px){
+  #home.satorq-master-home{
+    background-size:cover!important;
+    background-position:center center!important;
+    min-height:100svh!important;
+    height:100svh!important;
+    padding:70px 0 0!important;
+  }
+}
+@media (max-width:600px){
+  #home.satorq-master-home{
+    background-size:cover!important;
+    background-position:center center!important;
+    min-height:100svh!important;
+    height:100svh!important;
+    padding:70px 0 0!important;
+  }
+}
+@media (min-width:901px){
+  #home.satorq-master-home{
+    background-size:cover!important;
+    background-position:center center!important;
+  }
+}
+</style>
+</body></html>
