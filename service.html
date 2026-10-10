@@ -65,6 +65,19 @@
 .satorq-unified-header .satorq-wa{display:grid!important;place-items:center!important;width:24px!important;height:24px!important;border-radius:50%!important;background:#25d366!important;color:#fff!important;font-size:12px!important;text-decoration:none!important}
 .satorq-unified-header .satorq-search{font-size:22px!important;line-height:1!important;color:#fff!important}
 .satorq-unified-header .satorq-unified-tools span{font-size:15px!important;line-height:1!important}
+/* SA.TORQ unified visual scale patch 2026-10-10 */
+/* Consistent service page scale — no artificial zoom; keep all service options */
+html{font-size:16px!important;-webkit-text-size-adjust:100%}
+body{zoom:1!important}
+.satorq-unified-header{min-height:70px!important;height:auto!important;padding:12px 3.5%!important;gap:18px!important}
+.satorq-unified-nav{display:flex!important;align-items:center!important;gap:clamp(10px,1.2vw,19px)!important;flex:1 1 auto!important;min-width:0!important;overflow-x:auto!important;white-space:nowrap!important}
+.satorq-unified-nav a{font-size:10px!important;letter-spacing:.8px!important;flex:0 0 auto!important}
+.page{max-width:1400px!important;padding:42px 5% 80px!important}
+.hero{min-height:min(78vh,760px)!important;margin:0 0 42px!important;padding:clamp(32px,5vw,72px)!important}
+.hero h1{font-size:clamp(54px,7vw,96px)!important;line-height:.9!important}
+.hero p{font-size:14px!important;line-height:1.8!important}
+@media(max-width:900px){.satorq-unified-header{flex-wrap:wrap!important}.satorq-unified-nav{width:100%!important;max-width:100%!important;padding:8px 0!important}.satorq-unified-nav a{font-size:10px!important}.page{padding:28px 4% 60px!important}.hero{min-height:55vh!important;padding:32px 5%!important}.hero h1{font-size:clamp(42px,9vw,70px)!important}}
+
 </style></head><body><main class="page" id="top"><header class="satorq-unified-header">
 <a class="satorq-unified-logo" href="index.html">SA.<span>TORQ</span></a>
 <nav class="satorq-unified-nav" aria-label="SA.TORQ Navigation">
