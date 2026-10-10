@@ -64,6 +64,15 @@ body:before{
   border-color:rgba(255,255,255,.16)!important;
 }
 .foot{background:rgba(0,0,0,.34)!important;backdrop-filter:blur(5px)!important}
+/* SA.TORQ unified visual scale patch 2026-10-10 */
+/* Unified SA.TORQ scale; preserve all social links and content */
+html{font-size:16px!important;-webkit-text-size-adjust:100%}
+body{zoom:1!important}
+.satorq-unified-header{min-height:70px!important;height:auto!important;padding:12px 3.5%!important;gap:18px!important}
+.satorq-unified-nav{display:flex!important;align-items:center!important;gap:clamp(10px,1.2vw,19px)!important;flex:1 1 auto!important;min-width:0!important;overflow-x:auto!important;white-space:nowrap!important}
+.satorq-unified-nav a{font-size:10px!important;letter-spacing:.8px!important;flex:0 0 auto!important}
+@media(max-width:900px){.satorq-unified-header{flex-wrap:wrap!important}.satorq-unified-nav{width:100%!important;max-width:100%!important;padding:8px 0!important}.satorq-unified-nav a{font-size:10px!important}}
+
 </style></head><body><main class="wrap"><header class="satorq-unified-header">
 <a class="satorq-unified-logo" href="index.html">SA.<span>TORQ</span></a>
 <nav class="satorq-unified-nav" aria-label="SA.TORQ Navigation">
