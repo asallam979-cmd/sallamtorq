@@ -139,17 +139,19 @@ body{zoom:1!important}
 </style>
 
 <style id="satorq-home-header-match-20261010">
-/* Match the homepage header typography and spacing without changing its link order. */
-.satorq-unified-header{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:20px!important;padding:17px 4%!important;height:auto!important;min-height:70px!important}
-.satorq-unified-logo{flex:0 0 auto!important;font-size:22px!important;font-weight:900!important;letter-spacing:normal!important}
-.satorq-unified-nav{display:flex!important;flex:1 1 auto!important;align-items:center!important;justify-content:center!important;gap:clamp(10px,1.25vw,20px)!important;min-width:0!important;width:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none!important;white-space:nowrap!important}
-.satorq-unified-nav a{display:block!important;flex:0 0 auto!important;padding:8px 0!important;font-size:10px!important;letter-spacing:1px!important;font-weight:700!important;color:#ddd!important;text-transform:uppercase!important;white-space:nowrap!important}
-.satorq-unified-tools{display:flex!important;align-items:center!important;gap:10px!important;flex:0 0 auto!important;justify-content:flex-end!important}
+/* Same single-row header structure as the homepage. Keep link order unchanged. */
+.satorq-unified-header{position:sticky!important;top:0!important;z-index:99999!important;width:100%!important;max-width:none!important;height:70px!important;min-height:70px!important;margin:0!important;padding:0 4%!important;display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:20px!important;box-sizing:border-box!important;background:rgba(4,4,4,.92)!important;backdrop-filter:blur(4px)!important;border-bottom:1px solid rgba(255,255,255,.12)!important;font-family:Arial,Helvetica,sans-serif!important}
+.satorq-unified-logo{display:block!important;flex:0 0 auto!important;font-size:22px!important;font-weight:900!important;letter-spacing:normal!important;white-space:nowrap!important;color:#fff!important;text-decoration:none!important}
+.satorq-unified-nav{display:flex!important;flex:1 1 auto!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:center!important;gap:clamp(7px,1.25vw,20px)!important;min-width:0!important;width:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none!important;direction:ltr!important;white-space:nowrap!important}
+.satorq-unified-nav::-webkit-scrollbar{display:none!important}
+.satorq-unified-nav a{display:block!important;flex:0 0 auto!important;padding:8px 0!important;color:#ddd!important;text-decoration:none!important;font-size:10px!important;font-weight:700!important;letter-spacing:1px!important;text-transform:uppercase!important;white-space:nowrap!important}
+.satorq-unified-nav a:hover{color:#fff!important}
+.satorq-unified-tools{display:flex!important;flex:0 0 auto!important;align-items:center!important;justify-content:flex-end!important;gap:10px!important;white-space:nowrap!important;color:#fff!important}
 .satorq-unified-tools span{font-size:19px!important;line-height:1!important}
-.satorq-unified-tools .satorq-wa{width:28px!important;height:28px!important;font-size:18px!important}
-.satorq-unified-tools .satorq-search{font-size:22px!important}
-@media(max-width:1100px){.satorq-unified-header{flex-wrap:wrap!important;gap:10px!important;padding:12px 4%!important}.satorq-unified-nav{order:3!important;flex:0 0 100%!important;width:100%!important;justify-content:flex-start!important;gap:15px!important}.satorq-unified-nav a{font-size:10px!important;letter-spacing:1px!important}.satorq-unified-tools{margin-left:auto!important}}
-@media(max-width:520px){.satorq-unified-header{gap:8px!important;padding:10px 4%!important}.satorq-unified-logo{font-size:22px!important}.satorq-unified-nav{gap:15px!important}.satorq-unified-nav a{font-size:10px!important;letter-spacing:1px!important}}
+.satorq-unified-tools .satorq-wa{display:grid!important;place-items:center!important;width:28px!important;height:28px!important;border-radius:50%!important;background:#25d366!important;color:#fff!important;font-size:18px!important;text-decoration:none!important}
+.satorq-unified-tools .satorq-search{font-size:22px!important;line-height:1!important}
+@media(max-width:1100px){.satorq-unified-header{gap:10px!important;padding:0 2%!important}.satorq-unified-nav{justify-content:flex-start!important;gap:clamp(6px,.85vw,10px)!important}.satorq-unified-nav a{font-size:8px!important;letter-spacing:.35px!important}.satorq-unified-tools{gap:5px!important}.satorq-unified-tools span{font-size:14px!important}.satorq-unified-tools .satorq-wa{width:23px!important;height:23px!important;font-size:14px!important}}
+@media(max-width:700px){.satorq-unified-header{height:64px!important;min-height:64px!important;gap:8px!important;padding:0 3%!important}.satorq-unified-logo{font-size:18px!important}.satorq-unified-nav{gap:9px!important}.satorq-unified-nav a{font-size:8px!important;letter-spacing:.2px!important}.satorq-unified-tools{gap:4px!important}.satorq-unified-tools span{font-size:12px!important}.satorq-unified-tools .satorq-wa{width:21px!important;height:21px!important;font-size:12px!important}.satorq-unified-tools .satorq-search{font-size:18px!important}}
 </style>
 </head>
 <body>
