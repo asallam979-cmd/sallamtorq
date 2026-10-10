@@ -122,6 +122,22 @@ body{zoom:1!important}
 }
 
 </style>
+
+<style id="satorq-service-scale-fix-20261010">
+/* Service page scale correction: normal browser scale and stronger content sizing */
+html{font-size:16px!important;zoom:1!important;-webkit-text-size-adjust:100%!important}
+body{zoom:1!important;transform:none!important}
+main.page{width:100%!important;max-width:1440px!important;margin:0 auto!important;padding:42px clamp(24px,5vw,76px) 80px!important}
+main.page .hero{min-height:min(78vh,760px)!important;padding:clamp(36px,5vw,76px)!important}
+main.page .hero h1{font-size:clamp(58px,7.5vw,100px)!important;line-height:.9!important}
+main.page .hero p{font-size:15px!important;max-width:820px!important}
+main.page .grid{gap:18px!important}
+main.page .card,main.page .option{padding:28px!important}
+main.page .card h2,main.page .option h3{font-size:clamp(17px,1.5vw,21px)!important}
+main.page .card p,main.page .option p{font-size:13px!important;line-height:1.75!important}
+@media(max-width:850px){main.page{padding:26px 4% 56px!important}main.page .hero{min-height:55vh!important;padding:30px 5%!important}main.page .hero h1{font-size:clamp(44px,10vw,72px)!important}main.page .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}main.page .card,main.page .option{padding:18px!important}}
+@media(max-width:520px){main.page .grid{grid-template-columns:1fr!important}}
+</style>
 </head><body><header class="satorq-unified-header">
 <a class="satorq-unified-logo" href="index.html">SA.<span>TORQ</span></a>
 <nav class="satorq-unified-nav" aria-label="SA.TORQ Navigation">
