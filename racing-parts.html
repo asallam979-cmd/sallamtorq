@@ -143,6 +143,26 @@ body{zoom:1!important}
 @media(max-width:1100px){.satorq-unified-header{gap:10px!important;padding:0 2%!important}.satorq-unified-nav{justify-content:flex-start!important;gap:clamp(6px,.85vw,10px)!important}.satorq-unified-nav a{font-size:8px!important;letter-spacing:.35px!important}.satorq-unified-tools{gap:5px!important}.satorq-unified-tools span{font-size:14px!important}.satorq-unified-tools .satorq-wa{width:23px!important;height:23px!important;font-size:14px!important}}
 @media(max-width:700px){.satorq-unified-header{height:64px!important;min-height:64px!important;gap:8px!important;padding:0 3%!important}.satorq-unified-logo{font-size:18px!important}.satorq-unified-nav{gap:9px!important}.satorq-unified-nav a{font-size:8px!important;letter-spacing:.2px!important}.satorq-unified-tools{gap:4px!important}.satorq-unified-tools span{font-size:12px!important}.satorq-unified-tools .satorq-wa{width:21px!important;height:21px!important;font-size:12px!important}.satorq-unified-tools .satorq-search{font-size:18px!important}}
 </style>
+
+<style id="satorq-laptop-one-line-fix-20261010">
+/* Laptop: keep the existing homepage-style navigation on one single line. */
+@media(min-width:851px){
+.satorq-unified-header{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:clamp(8px,1.2vw,20px)!important;padding:17px 3.5%!important;height:70px!important;min-height:70px!important}
+.satorq-unified-logo{flex:0 0 auto!important;font-size:22px!important;white-space:nowrap!important}
+.satorq-unified-nav{display:flex!important;flex:1 1 auto!important;order:initial!important;min-width:0!important;width:auto!important;max-width:none!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:space-between!important;gap:clamp(7px,.85vw,13px)!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none!important;white-space:nowrap!important;padding:0!important}
+.satorq-unified-nav::-webkit-scrollbar{display:none!important}
+.satorq-unified-nav a{flex:0 0 auto!important;font-size:10px!important;letter-spacing:1px!important;font-weight:700!important;padding:8px 0!important;white-space:nowrap!important}
+.satorq-unified-tools{flex:0 0 auto!important;margin-left:0!important;gap:8px!important;white-space:nowrap!important}
+}
+@media(min-width:851px) and (max-width:1180px){
+.satorq-unified-header{gap:10px!important;padding-left:2.5%!important;padding-right:2.5%!important}
+.satorq-unified-logo{font-size:20px!important}
+.satorq-unified-nav{justify-content:flex-start!important;gap:10px!important}
+.satorq-unified-nav a{font-size:9px!important;letter-spacing:.6px!important}
+.satorq-unified-tools{gap:5px!important}
+.satorq-unified-tools span{font-size:14px!important}
+}
+</style>
 </head>
 <body><header class="satorq-unified-header">
 <a class="satorq-unified-logo" href="index.html">SA.<span>TORQ</span></a>
