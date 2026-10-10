@@ -60,3 +60,12 @@ footer strong{font-size:0!important}footer strong:after{content:'SA.TORQ';font-s
 
 /* MASTER IMAGE FIX — use the reliable JPG asset across the entire SA.TORQ visual system */
 body{background:#050505!important}
+
+/* FINAL CONSISTENT SA.TORQ HEADER — only nav sizing/alignment */
+html{font-size:16px!important;-webkit-text-size-adjust:100%!important}
+body{zoom:1!important}
+.hero-header{display:grid!important;grid-template-columns:130px minmax(0,1fr) 100px!important;align-items:center!important;gap:12px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;padding:0 3%!important}
+.hero-header #mainNav{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:space-between!important;gap:clamp(5px,.75vw,11px)!important;width:100%!important;min-width:0!important;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap!important;direction:ltr!important}
+.hero-header #mainNav>a{display:block!important;flex:0 0 auto!important;white-space:nowrap!important;font-size:clamp(8px,.67vw,10px)!important;letter-spacing:.45px!important;line-height:1.2!important}
+.hero-header .logo{white-space:nowrap!important}
+@media(max-width:900px){.hero-header{grid-template-columns:1fr auto!important;gap:8px 12px!important;padding:10px 4%!important}.hero-header .logo{grid-column:1;grid-row:1}.hero-header .header-tools{grid-column:2;grid-row:1}.hero-header #mainNav{grid-column:1/-1;grid-row:2;justify-content:flex-start!important;gap:16px!important;padding:6px 0!important}.hero-header #mainNav>a{font-size:10px!important}}
