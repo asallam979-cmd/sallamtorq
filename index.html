@@ -156,4 +156,25 @@
     background-repeat:no-repeat!important;
   }
 }
-</style></body></html>
+</style><script id="satorq-section-navigation-fix">
+(function(){
+  function jumpToRequestedSection(){
+    var id = window.location.hash.slice(1);
+    if (id !== "training" && id !== "trips") return;
+    var target = document.getElementById(id);
+    if (!target) return;
+    target.scrollIntoView({block:"start", behavior:"auto"});
+  }
+  if (document.readyState === "complete") {
+    setTimeout(jumpToRequestedSection, 80);
+  } else {
+    window.addEventListener("load", function(){
+      requestAnimationFrame(function(){
+        setTimeout(jumpToRequestedSection, 80);
+      });
+    }, {once:true});
+  }
+  window.addEventListener("hashchange", jumpToRequestedSection);
+})();
+</script>
+</body></html>
