@@ -78,3 +78,27 @@ body{zoom:1!important}
 .account-link{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;border:1px solid rgba(225,6,0,.8);padding:9px 11px;color:#fff!important;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;transition:background .2s,border-color .2s}
 .account-link:hover{background:#e10600;border-color:#e10600}
 @media(max-width:600px){.header-tools{gap:7px}.account-link{padding:8px 7px;font-size:8px;letter-spacing:.5px}.tool-sep{display:none}}
+
+
+/* SA.TORQ account dropdown — isolated nav control, scoped to the account feature only. */
+.header-tools .account-menu-wrap{position:relative;display:inline-flex;align-items:center;flex:0 1 auto;min-width:0;max-width:clamp(118px,13vw,190px)}
+.header-tools .account-link{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;cursor:pointer;text-align:center}
+.header-tools .account-menu{position:absolute;top:calc(100% + 10px);right:0;z-index:1000;width:205px;padding:6px;background:rgba(8,8,8,.98);border:1px solid rgba(225,6,0,.65);box-shadow:0 12px 30px rgba(0,0,0,.45);backdrop-filter:blur(10px)}
+.header-tools .account-menu[hidden]{display:none!important}
+.header-tools .account-menu-item{display:block;width:100%;box-sizing:border-box;padding:12px 13px;background:transparent;border:0;border-bottom:1px solid #252525;color:#ddd!important;text-align:left;text-decoration:none;font:800 9px/1.35 Arial,Helvetica,sans-serif;letter-spacing:1px;white-space:normal;cursor:pointer}
+.header-tools .account-menu-item:last-child{border-bottom:0}
+.header-tools .account-menu-item:hover,.header-tools .account-menu-item:focus-visible{background:#171717;color:#fff!important;outline:none}
+.header-tools .account-menu-logout{color:#ff5b55!important}
+@media(min-width:901px){
+  .hero-header.satorq-reference-header .header-tools .account-menu-wrap{max-width:clamp(118px,12vw,175px)}
+  .hero-header.satorq-reference-header .header-tools .account-link{font-size:clamp(7px,.62vw,9px);letter-spacing:.45px;padding:9px 8px}
+}
+@media(max-width:900px){
+  .hero-header .header-tools .account-menu-wrap{max-width:min(42vw,190px)}
+  .hero-header .header-tools .account-link{font-size:8px;letter-spacing:.4px;padding:8px 7px}
+  .hero-header .header-tools .account-menu{right:0;width:min(205px,82vw)}
+}
+@media(max-width:600px){
+  .hero-header .header-tools .account-menu-wrap{max-width:42vw}
+  .hero-header .header-tools .account-link{max-width:100%;font-size:7px;letter-spacing:.25px;padding:8px 5px}
+}
