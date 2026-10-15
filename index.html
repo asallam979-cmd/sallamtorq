@@ -697,7 +697,7 @@
   if(session&&session.user){
    const user=session.user;
    const name=(user.user_metadata&&user.user_metadata.full_name)||((user.email||'').split('@')[0])||'Rider';
-   link.textContent=name;link.href='account.html';link.setAttribute('aria-label','Customer account for '+name);
+   link.textContent='HELLO, ['+name+']';link.href='account.html';link.setAttribute('aria-label','Customer account for '+name);
    logout.hidden=false;
   }else{link.textContent='SIGN UP / LOGIN';link.href='account.html';link.removeAttribute('aria-label');logout.hidden=true;}
  }
