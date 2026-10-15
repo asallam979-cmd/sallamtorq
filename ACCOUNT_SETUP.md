@@ -13,7 +13,7 @@ The static site is hosted on GitHub Pages, so it needs a managed authentication 
 4. In Supabase Authentication → URL Configuration, set the Site URL to https://asallam979-cmd.github.io/sallamtorq.
 5. Add these redirect URLs:
    - https://asallam979-cmd.github.io/sallamtorq/account.html
-   - https://asallam979-cmd.github.io/sallamtorq/account.html#reset
+   - https://asallam979-cmd.github.io/sallamtorq/account.html?mode=reset
 6. Configure email delivery for production and customize the confirmation/reset email templates.
 7. Test sign-up confirmation, login, logout, and password reset on desktop and mobile.
 
