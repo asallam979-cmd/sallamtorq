@@ -70,4 +70,4 @@ body{zoom:1!important}
 .hero-header .logo{white-space:nowrap!important}
 @media(max-width:900px){.hero-header{grid-template-columns:1fr auto!important;gap:8px 12px!important;padding:10px 4%!important}.hero-header .logo{grid-column:1;grid-row:1}.hero-header .header-tools{grid-column:2;grid-row:1}.hero-header #mainNav{grid-column:1/-1;grid-row:2;justify-content:flex-start!important;gap:16px!important;padding:6px 0!important}.hero-header #mainNav>a{font-size:10px!important}}
 /* SA.TORQ header hairline: subtle brand-red top edge, preserving the existing header layout. */
-header.hero-header, header.satorq-unified-header { border-top: 2px solid #e10600 !important; }
+/* Removed unwanted red top line from the header. */
