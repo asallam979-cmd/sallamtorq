@@ -89,7 +89,7 @@
 <div class="master-logo">SA.<span>TORQ</span></div>
 <div class="master-tagline">ALL YOU NEED FOR RIDERS</div>
 <div class="master-sub">MODELS <b>|</b> PARTS <b>|</b> SERVICE <b>|</b> TRAINING <b>|</b> PERFORMANCE</div>
-<a class="discover-world-link" href="#hub">DISCOVER THE SA.TORQ WORLD <span aria-hidden="true">↓</span></a>
+<a class="discover-world-link" href="#hub">DISCOVER THE SA.TORQ WORLD <span class="discover-world-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 4v15M5 12l7 7 7-7"/></svg></span></a>
 </div>
 <div class="master-location"><span>EGYPT</span><span>ITALY</span><span>RIDERS</span><span>ONE PASSION</span><div class="master-tricolor"></div></div>
 <div class="master-worlds">
@@ -268,10 +268,14 @@
 </style>
 
 
-<style id="satorq-discover-world-visible-final">
-/* Keep the requested discover link visible beneath the SA.TORQ hero text. */
-#home.satorq-master-home .master-center{display:block!important}
-#home.satorq-master-home .discover-world-link{display:inline-flex!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:5!important}
+<style id="satorq-home-final-cta">
+/* Final, explicit home-only placement for the Discover link and its arrow icon. */
+#home.satorq-master-home .master-center{display:block!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:10!important}
+#home.satorq-master-home .discover-world-link{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:12px!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:11!important;width:max-content!important;max-width:92%!important;margin:22px auto 0!important;padding:10px 0!important;border-bottom:1px solid rgba(225,6,0,.85)!important;color:#f5f5f5!important;font-size:10px!important;font-weight:800!important;letter-spacing:2px!important;text-decoration:none!important}
+#home.satorq-master-home .discover-world-icon{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:27px!important;height:27px!important;flex:0 0 27px!important;border:1px solid #e10600!important;border-radius:50%!important;background:#090909!important;color:#e10600!important}
+#home.satorq-master-home .discover-world-icon svg{display:block!important;width:16px!important;height:16px!important;fill:none!important;stroke:currentColor!important;stroke-width:2!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+#home.satorq-master-home .discover-world-link:hover{color:#fff!important;gap:15px!important}
+@media(max-width:600px){#home.satorq-master-home .master-center{margin-top:70px!important}#home.satorq-master-home .discover-world-link{font-size:8px!important;letter-spacing:1.2px!important;gap:8px!important;margin-top:18px!important}#home.satorq-master-home .discover-world-icon{width:25px!important;height:25px!important;flex-basis:25px!important}}
 </style>
 
 </body></html>
