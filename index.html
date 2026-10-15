@@ -485,6 +485,48 @@
   }
 }
 </style>
+<style id="satorq-worlds-final-video-layout">
+@media (min-width:901px){
+  /* Remove the three Explore More captions and their red line markers. */
+  #home.satorq-master-home .master-worlds .world-card span,
+  #home.satorq-master-home .master-worlds .world-card span:before{
+    display:none!important;content:none!important;
+  }
+  /* Keep the three Worlds names, with the Discover label directly above the centered arrow. */
+  #home.satorq-master-home .master-center{
+    display:block!important;position:absolute!important;left:0!important;right:0!important;
+    bottom:112px!important;width:100%!important;max-width:none!important;
+    margin:0!important;padding:0!important;text-align:center!important;
+    z-index:30!important;pointer-events:none!important;
+  }
+  #home.satorq-master-home .master-center .master-logo,
+  #home.satorq-master-home .master-center .master-tagline,
+  #home.satorq-master-home .master-center .master-sub{display:none!important}
+  #home.satorq-master-home .master-center .discover-world-link{
+    display:inline-flex!important;flex-direction:column!important;
+    align-items:center!important;justify-content:center!important;
+    width:auto!important;height:auto!important;min-width:0!important;
+    margin:0!important;padding:0!important;border:0!important;border-radius:0!important;
+    background:transparent!important;color:#f5f5f5!important;
+    font-size:9px!important;font-weight:800!important;letter-spacing:1.7px!important;
+    line-height:1.4!important;text-decoration:none!important;gap:5px!important;
+    pointer-events:auto!important;transform:none!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link .discover-world-icon{
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    width:22px!important;height:22px!important;color:#e10600!important;font-size:0!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link .discover-world-icon svg{
+    display:block!important;width:19px!important;height:19px!important;fill:none!important;
+    stroke:#e10600!important;stroke-width:1.7!important;stroke-linecap:round!important;stroke-linejoin:round!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link:hover{
+    color:#e10600!important;gap:5px!important;transform:translateY(2px)!important;
+  }
+  /* Avoid a second decorative arrow at the bottom; the clickable arrow is inside Discover. */
+  #home.satorq-master-home .master-worlds:after{display:none!important;content:none!important}
+}
+</style>
 </body></html>
 
 <style id="satorq-discover-icon-and-stable-laptop-header">
