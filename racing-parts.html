@@ -225,4 +225,77 @@ const featuredParts=[
 const grid=document.getElementById('grid'),count=document.getElementById('count');let brand='ALL',cat='ALL';
 function render(){const selectedModel=modelSelect.value;const filtered=parts.filter(p=>(brand==='ALL'||p[0]===brand)&&(cat==='ALL'||p[2]===cat)&&(selectedModel==='ALL'||p[0]+'|'+p[1]===selectedModel));if(cat==='EXHAUST')filtered.push(...exhaustOptions);filtered.push(...addedPartCards());filtered.push(...featuredParts.filter(p=>(brand==='ALL'||p[0]===brand)&&(cat==='ALL'||p[2]===cat)&&(selectedModel==='ALL'||p[0]+'|'+p[6]===selectedModel)));count.textContent=filtered.length;grid.innerHTML=filtered.map(function(p){const isSupplier=['AKRAPOVIČ','SC PROJECT','ARROW'].includes(p[0]);const sectionLabel=isSupplier?'EXHAUST BRANDS':(p[0]==='SA.TORQ'?'PARTS GUIDE':'RACING PARTS');const img=p[3]||IMAGE;return '<article class="card"><div class="photo"><img src="'+img+'" alt="'+p[0]+' '+p[1]+' part" loading="lazy" onerror="this.onerror=null;this.src=IMAGE"><span class="ref">REFERENCE IMAGE</span></div><div class="cardbody"><div class="brand">'+p[0]+' / '+sectionLabel+'</div><div class="model">'+p[1]+'</div><div class="cat">'+p[2]+'</div><div class="fit">'+(p[4]||'TRACK / PERFORMANCE APPLICATION')+'</div>'+(p[5]?'<div class="part-types">PART TYPES: '+p[5]+'</div>':'')+'<div class="actions"><a class="quote" target="_blank" rel="noopener" href="https://wa.me/201118261116?text='+encodeURIComponent('SA.TORQ Parts enquiry — '+p[0]+' / '+p[1]+' / '+p[2])+'">ENQUIRE →</a></div></div></article>'}).join('')}document.querySelectorAll('#brandFilters .filter').forEach(b=>b.onclick=()=>{brand=b.dataset.brand;modelSelect.value='ALL';document.querySelectorAll('#brandFilters .filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()});document.querySelectorAll('#catFilters .filter').forEach(b=>b.onclick=()=>{cat=b.dataset.cat;document.querySelectorAll('#catFilters .filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()});modelSelect.onchange=function(){if(modelSelect.value!=='ALL'){const make=modelSelect.value.split('|')[0];brand=make;document.querySelectorAll('#brandFilters .filter').forEach(function(b){b.classList.toggle('active',b.dataset.brand===make)});}else{brand='ALL';document.querySelectorAll('#brandFilters .filter').forEach(function(b){b.classList.toggle('active',b.dataset.brand==='ALL')});}render()};render();
 </script>
+
+<style id="satorq-consistent-desktop-header">
+/* Shared desktop header system: identical height, alignment, spacing and dark treatment on every page. Mobile/tablet rules are intentionally untouched. */
+@media (min-width:901px){
+  header.hero-header.satorq-reference-header,
+  header.satorq-unified-header,
+  header.site-header{
+    position:sticky!important;top:0!important;left:0!important;right:0!important;z-index:99999!important;
+    display:grid!important;grid-template-columns:clamp(108px,12vw,158px) minmax(0,1fr) clamp(84px,10vw,128px)!important;
+    align-items:center!important;gap:clamp(6px,.8vw,12px)!important;
+    width:100%!important;height:70px!important;min-height:70px!important;max-height:70px!important;
+    margin:0!important;padding:0 clamp(12px,2.5vw,36px)!important;box-sizing:border-box!important;
+    overflow:visible!important;background:rgba(4,4,4,.94)!important;
+    backdrop-filter:blur(12px)!important;border-bottom:1px solid rgba(255,255,255,.16)!important;
+    flex-wrap:nowrap!important;
+  }
+  header.hero-header.satorq-reference-header{position:absolute!important}
+  header.hero-header.satorq-reference-header .logo,
+  header.satorq-unified-header .satorq-unified-logo,
+  header.site-header .logo{
+    grid-column:1!important;grid-row:1!important;display:block!important;min-width:0!important;
+    margin:0!important;white-space:nowrap!important;font-size:clamp(16px,1.45vw,21px)!important;
+    line-height:1!important;letter-spacing:-.7px!important;
+  }
+  header.hero-header.satorq-reference-header nav#mainNav,
+  header.satorq-unified-header nav.satorq-unified-nav,
+  header.site-header nav.nav{
+    grid-column:2!important;grid-row:1!important;display:flex!important;flex-wrap:nowrap!important;
+    align-items:center!important;justify-content:center!important;min-width:0!important;width:100%!important;
+    max-width:100%!important;overflow:hidden!important;white-space:nowrap!important;
+    gap:clamp(5px,.62vw,9px)!important;padding:0!important;margin:0!important;
+  }
+  header.hero-header.satorq-reference-header nav#mainNav>a,
+  header.satorq-unified-header nav.satorq-unified-nav>a,
+  header.site-header nav.nav>a{
+    flex:0 1 auto!important;min-width:0!important;white-space:nowrap!important;
+    font-size:clamp(6.5px,.62vw,9px)!important;line-height:1.2!important;
+    letter-spacing:clamp(0px,.035vw,.5px)!important;padding:8px 0!important;margin:0!important;
+  }
+  header.hero-header.satorq-reference-header .header-tools,
+  header.satorq-unified-header .satorq-unified-tools,
+  header.site-header .tools{
+    grid-column:3!important;grid-row:1!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;min-width:0!important;gap:clamp(4px,.5vw,8px)!important;
+    margin:0!important;padding:0!important;white-space:nowrap!important;flex-wrap:nowrap!important;
+  }
+  header.hero-header.satorq-reference-header .header-tools .flag,
+  header.satorq-unified-header .satorq-unified-tools span,
+  header.site-header .tools .flags{font-size:clamp(11px,1vw,15px)!important;line-height:1!important}
+  header.hero-header.satorq-reference-header .wa-top,
+  header.satorq-unified-header .satorq-wa,
+  header.site-header .tools .wa{flex:0 0 23px!important;width:23px!important;height:23px!important}
+  header.hero-header.satorq-reference-header .search-icon,
+  header.satorq-unified-header .satorq-search,
+  header.site-header .tools .search{flex:0 0 20px!important;width:20px!important;height:24px!important}
+  header.hero-header.satorq-reference-header .search-panel,
+  header.hero-header.satorq-reference-header .search-results{z-index:100000!important}
+}
+@media (min-width:901px) and (max-width:1100px){
+  header.hero-header.satorq-reference-header,
+  header.satorq-unified-header,
+  header.site-header{
+    grid-template-columns:100px minmax(0,1fr) 76px!important;gap:5px!important;padding:0 10px!important;
+  }
+  header.hero-header.satorq-reference-header nav#mainNav,
+  header.satorq-unified-header nav.satorq-unified-nav,
+  header.site-header nav.nav{gap:5px!important}
+  header.hero-header.satorq-reference-header nav#mainNav>a,
+  header.satorq-unified-header nav.satorq-unified-nav>a,
+  header.site-header nav.nav>a{font-size:6.5px!important;letter-spacing:0!important}
+}
+</style>
+
 </body></html>
