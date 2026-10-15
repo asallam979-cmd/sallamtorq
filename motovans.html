@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SA.TORQ — MotoVans & Build Your Dream</title>
+<meta name="description" content="Explore SA.TORQ MotoVans: motorcycle transport vans, touring and accommodation conversions, and custom build requests.">
+<meta name="theme-color" content="#050505">
+<style>
+:root{--red:#e10600;--bg:#050505;--panel:#101010;--line:rgba(255,255,255,.14);--muted:#aaa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050505;color:#f4f4f4;font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.site-header{position:sticky;top:0;z-index:1000;display:grid;grid-template-columns:150px minmax(0,1fr) 155px;align-items:center;gap:14px;min-height:70px;padding:0 4%;background:rgba(5,5,5,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.logo{font-size:22px;font-weight:900;letter-spacing:-1.3px;white-space:nowrap}.logo span{color:var(--red)}.nav{display:flex;justify-content:center;align-items:center;gap:clamp(8px,1.15vw,17px);min-width:0;overflow-x:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{flex:0 0 auto;font-size:9px;letter-spacing:.8px;color:#ccc;white-space:nowrap}.nav a:hover,.nav a[aria-current=page]{color:#fff}.nav a[aria-current=page]{border-bottom:1px solid var(--red);padding-bottom:5px}.tools{display:flex;justify-content:flex-end;align-items:center;gap:8px;white-space:nowrap}.wa{color:#25d366;font-size:22px}.flags{font-size:14px}.search{font-size:22px}
+.wrap{width:min(1280px,92%);margin:auto}.hero{position:relative;isolation:isolate;min-height:560px;margin:26px auto 0;display:flex;align-items:flex-end;padding:clamp(26px,5vw,66px);overflow:hidden;border:1px solid var(--line);background:#101010}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:url('https://rocket-camper.de/files/upload/Rocket%20Camper/02_ROCKETS/05_Rocket%20Moto/02_Interieur/rocketone_rocketmoto_interieur_12.jpg') center 43%/cover no-repeat;filter:brightness(.55)}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.22) 78%),linear-gradient(0deg,rgba(0,0,0,.78),transparent 70%)}.eyebrow{color:var(--red);font-weight:800;font-size:10px;letter-spacing:3px}.hero h1{font-size:clamp(48px,8vw,100px);line-height:.88;letter-spacing:-3px;margin:18px 0;max-width:850px}.hero h1 span{color:var(--red)}.hero p{max-width:620px;color:#ddd;font-size:14px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 17px;border:1px solid #555;background:#111;font-size:10px;font-weight:800;letter-spacing:1px}.btn.primary{background:var(--red);border-color:var(--red)}.section{padding:68px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section-head h2{font-size:clamp(28px,4vw,44px);line-height:1;margin:8px 0}.section-head p{max-width:530px;color:#999;font-size:12px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:#0d0d0d;border:1px solid var(--line);overflow:hidden}.card img{width:100%;height:245px;object-fit:cover;background:#161616;transition:transform .3s}.card:hover img{transform:scale(1.025)}.card-body{padding:20px}.tag{color:var(--red);font-size:9px;font-weight:800;letter-spacing:2px}.card h3{font-size:21px;margin:8px 0}.card p{font-size:12px;color:#aaa;margin:0 0 15px}.text-link{display:inline-block;border-bottom:1px solid var(--red);padding-bottom:4px;font-size:10px;font-weight:800;letter-spacing:1px}.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}.feature img{width:100%;height:420px;object-fit:cover;border:1px solid var(--line)}.feature h2{font-size:clamp(34px,5vw,58px);line-height:.95;margin:12px 0}.feature p,.feature li{color:#aaa;font-size:13px}.feature ul{padding-left:18px}.custom{padding:clamp(24px,5vw,55px);background:linear-gradient(130deg,#151515,#080808);border:1px solid #333}.custom-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.custom h2{font-size:clamp(34px,5vw,58px);line-height:.95;margin:12px 0}.custom p{color:#aaa;font-size:13px}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form label{display:block;font-size:10px;color:#bbb;letter-spacing:.6px}.form input,.form select,.form textarea{width:100%;margin-top:6px;padding:12px;background:#090909;border:1px solid #3a3a3a;color:#fff;font:inherit;font-size:12px;border-radius:0}.form .full{grid-column:1/-1}.form textarea{min-height:95px;resize:vertical}.form button{cursor:pointer;color:#fff}.note{color:#777;font-size:10px}.credits{padding:0 0 35px;color:#777;font-size:10px}.credits a{text-decoration:underline}.footer{border-top:1px solid var(--line);padding:25px 0;color:#888;font-size:10px;letter-spacing:1px}
+@media(max-width:1000px){.site-header{grid-template-columns:125px minmax(0,1fr) 115px;gap:8px;padding:10px 3%;}.nav{justify-content:flex-start}.nav a{font-size:8px}.flags{display:none}.hero{min-height:500px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{grid-template-columns:1fr 1fr}.feature img{height:350px}}
+@media(max-width:650px){.site-header{grid-template-columns:1fr auto;min-height:unset;padding:12px 4%}.logo{font-size:20px}.tools{grid-column:2;grid-row:1}.nav{grid-column:1/-1;grid-row:2;justify-content:flex-start;padding:9px 0 2px}.hero{min-height:510px;margin-top:12px;padding:24px}.hero h1{letter-spacing:-1.5px}.hero p{font-size:12px}.section{padding:45px 0}.section-head{display:block}.section-head p{margin-top:12px}.cards{grid-template-columns:1fr}.card img{height:250px}.feature,.custom-grid{grid-template-columns:1fr}.feature img{height:300px}.form{grid-template-columns:1fr}.form .full{grid-column:auto}.custom{padding:23px}.section-head h2{line-height:1.05}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<a class="logo" href="index.html" aria-label="SA.TORQ Home">SA.<span>TORQ</span></a>
+<nav class="nav" aria-label="SA.TORQ Navigation">
+<a href="models-catalog.html">MODELS</a><a href="motovans.html" aria-current="page">MOTOVANS</a><a href="moto-gear.html">MOTO GEAR</a><a href="riders.html#clans">RIDERS</a><a href="service.html">SERVICE</a><a href="racing-parts.html">PARTS</a><a href="index.html#training">TRAINING</a><a href="performance-tuning.html">PERFORMANCE TUNING</a><a href="index.html#events">EVENTS</a><a href="index.html#faq">FAQ</a><a href="social.html">SOCIAL</a>
+</nav>
+<div class="tools"><a class="wa" href="https://wa.me/201118261116" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a><span class="flags">🇪🇬 🇮🇹 🇬🇧</span><span class="search" aria-hidden="true">⌕</span></div>
+</header>
+<main>
+<section class="hero wrap">
+<div><div class="eyebrow">SA.TORQ CUSTOM EXPERIENCE</div><h1>YOUR VAN.<br>YOUR <span>WORLD.</span></h1><p>Motorcycle transport. Touring comfort. Custom interiors. Discover the possibilities, then shape a MotoVan around the way you ride, travel and live.</p><div class="actions"><a class="btn primary" href="#build">BUILD YOUR DREAM</a><a class="btn" href="#concepts">EXPLORE CONCEPTS</a></div></div>
+</section>
+<section class="section wrap" id="concepts">
+<div class="section-head"><div><div class="eyebrow">FIND YOUR CONFIGURATION</div><h2>ONE VAN. MORE POSSIBILITIES.</h2></div><p>Start with the purpose. Every layout depends on the base vehicle, dimensions, payload, budget and local requirements. These are inspiration concepts—not confirmed stock or fixed-price packages.</p></div>
+<div class="cards">
+<article class="card"><img src="https://imgr1.promobil.de/Motorrad-Camper-2020--169FullWidth-2c264bcf-1659066.jpg" alt="Motorcycle camper van interior with a secured motorcycle and fold-down bed" loading="lazy"><div class="card-body"><div class="tag">01 / TRANSPORT</div><h3>MOTO TRANSPORT</h3><p>Secure motorcycle bay, loading ramp options, wheel chocks, tie-down rails and dedicated gear storage.</p><a class="text-link" href="#build">PLAN A TRANSPORT VAN ↗</a></div></article>
+<article class="card"><img src="https://rocket-camper.de/files/upload/Rocket%20Camper/02_ROCKETS/05_Rocket%20Moto/02_Interieur/rocketone_rocketmoto_interieur_12.jpg" alt="MotoVan interior showing motorcycle below a raised sleeping bed" loading="lazy"><div class="card-body"><div class="tag">02 / RIDE + SLEEP</div><h3>MOTO & SLEEP</h3><p>A flexible layout that can combine bike storage with a raised or fold-away bed and practical equipment storage.</p><a class="text-link" href="#build">PLAN A SLEEPING LAYOUT ↗</a></div></article>
+<article class="card"><img src="https://combeing.lu/img/cms/GALERIE_CLEAN/pages_cms/france/cocon_semantique/fr-vafaccvcaua/fr-sports/fr-moto/medias/combeing_et_espace.jpg" alt="Modular van interior with motorcycle and convertible bench bed" loading="lazy"><div class="card-body"><div class="tag">03 / MODULAR</div><h3>TRAVEL & LIVING</h3><p>Convertible seating, sleeping space, modular storage and optional travel equipment, planned around your needs.</p><a class="text-link" href="#build">PLAN A TRAVEL VAN ↗</a></div></article>
+</div>
+</section>
+<section class="section wrap">
+<div class="feature"><img src="https://s1.cdn.autoevolution.com/images/news/gallery/the-multi-use-orion-365-can-easily-transition-from-adventure-van-to-gear-hauling-vehicle_6.jpg" alt="Motorcycle secured inside a van below a raised bed system" loading="lazy"><div><div class="eyebrow">SMART SPACE. RIDER FIRST.</div><h2>DESIGNED AROUND YOUR RIDE.</h2><p>Build the space around what matters to you—from a single bike and riding kit to a multi-purpose travel setup.</p><ul><li>Motorcycle capacity and tie-down layout</li><li>Ramp, wheel chock and loading access</li><li>Raised, fold-away or convertible bed options</li><li>Storage for helmets, riding gear and tools</li><li>Optional lighting, power, ventilation and travel equipment</li></ul><p class="note">All layouts must be checked against vehicle dimensions, axle loads, safe restraint points, ventilation and applicable registration requirements before implementation.</p><a class="btn primary" href="#build">START YOUR CUSTOM REQUEST</a></div></div>
+</section>
+<section class="section wrap" id="build">
+<div class="custom"><div class="custom-grid"><div><div class="eyebrow">YOUR IDEA STARTS HERE</div><h2>BUILD YOUR<br><span style="color:var(--red)">DREAM.</span></h2><p>Tell SA.TORQ what you want to build. Share the use case, base vehicle if you have one, preferred features and approximate budget. We can review the brief and discuss the next step.</p><p class="note">This is a project enquiry, not an instant quote or confirmation that every conversion is available.</p></div>
+<form class="form" id="buildForm">
+<label>PROJECT TYPE<select name="type" required><option value="">Choose project</option><option>Moto transport van</option><option>Moto + sleeping setup</option><option>Travel / accommodation van</option><option>Full custom MotoVan</option><option>Custom motorcycle</option></select></label>
+<label>BASE VEHICLE<input name="vehicle" placeholder="Make / model / year (if known)"></label>
+<label>BIKES TO CARRY<select name="bikes"><option>Not applicable</option><option>1 motorcycle</option><option>2 motorcycles</option><option>3 or more (needs feasibility check)</option></select></label>
+<label>ESTIMATED BUDGET<select name="budget"><option value="">Choose range</option><option>To be discussed</option><option>Under EGP 250,000</option><option>EGP 250,000–500,000</option><option>EGP 500,000–1,000,000</option><option>Above EGP 1,000,000</option></select></label>
+<label class="full">FEATURES YOU WANT<textarea name="features" placeholder="Bed, storage, ramp, tie-downs, power, lighting, kitchen, finishes…"></textarea></label>
+<label class="full">YOUR NAME<input name="name" placeholder="Name" required></label>
+<label class="full">CONTACT NUMBER<input name="contact" placeholder="WhatsApp number with country code" required></label>
+<button class="btn primary full" type="submit">SEND PROJECT BRIEF ON WHATSAPP ↗</button>
+<div class="note full">Your details will be prepared as a WhatsApp message so you can review and send them.</div>
+</form></div></div>
+</section>
+<div class="wrap credits">Visual references: <a href="https://www.promobil.de/neuheiten/motorrad-camper-2020-fiat-ducato-campingbus/" target="_blank" rel="noopener">promobil</a>, <a href="https://rocket-camper.de/rocket-moto.html" target="_blank" rel="noopener">Rocket Camper</a>, <a href="https://combeing.lu/de/24-van-ausbauen-motorrad" target="_blank" rel="noopener">Combeing</a>, and <a href="https://www.autoevolution.com/news/the-multi-use-orion-365-can-easily-transition-from-adventure-van-to-gear-hauling-vehicle-243150.html" target="_blank" rel="noopener">autoevolution</a>. Reference images are illustrative; ownership, availability and build capability must be verified before commercial use.</div>
+</main>
+<footer class="footer"><div class="wrap">SA.TORQ · ALL YOU NEED FOR RIDERS · EGYPT × ITALY</div></footer>
+<script>
+document.getElementById('buildForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const f=new FormData(this);
+ const lines=[
+ 'SA.TORQ — BUILD YOUR DREAM PROJECT',
+ 'Project: '+(f.get('type')||'Not specified'),
+ 'Base vehicle: '+(f.get('vehicle')||'Not specified'),
+ 'Motorcycles to carry: '+(f.get('bikes')||'Not specified'),
+ 'Budget: '+(f.get('budget')||'Not specified'),
+ 'Features: '+(f.get('features')||'Not specified'),
+ 'Name: '+(f.get('name')||'Not specified'),
+ 'Contact: '+(f.get('contact')||'Not specified')
+ ];
+ window.open('https://wa.me/201118261116?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+});
+</script>
+</body>
+</html>
