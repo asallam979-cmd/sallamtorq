@@ -392,6 +392,15 @@
   #home.satorq-master-home .master-center .discover-world-link{display:none!important}
 }
 </style>
+<style id="satorq-remove-misplaced-discover-icon">
+/* Remove the misplaced Discover control and decorative arrow from the desktop/tablet hero. */
+@media (min-width:601px){
+  #home.satorq-master-home .master-center .discover-world-link,
+  #home.satorq-master-home .master-worlds:after{
+    display:none!important;visibility:hidden!important;content:none!important;
+  }
+}
+</style>
 </body></html>
 
 <style id="satorq-discover-icon-and-stable-laptop-header">
