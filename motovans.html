@@ -73,5 +73,78 @@ document.getElementById('buildForm').addEventListener('submit',function(e){
  window.open('https://wa.me/201118261116?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
 });
 </script>
+
+<style id="satorq-consistent-desktop-header">
+/* Shared desktop header system: identical height, alignment, spacing and dark treatment on every page. Mobile/tablet rules are intentionally untouched. */
+@media (min-width:901px){
+  header.hero-header.satorq-reference-header,
+  header.satorq-unified-header,
+  header.site-header{
+    position:sticky!important;top:0!important;left:0!important;right:0!important;z-index:99999!important;
+    display:grid!important;grid-template-columns:clamp(108px,12vw,158px) minmax(0,1fr) clamp(84px,10vw,128px)!important;
+    align-items:center!important;gap:clamp(6px,.8vw,12px)!important;
+    width:100%!important;height:70px!important;min-height:70px!important;max-height:70px!important;
+    margin:0!important;padding:0 clamp(12px,2.5vw,36px)!important;box-sizing:border-box!important;
+    overflow:visible!important;background:rgba(4,4,4,.94)!important;
+    backdrop-filter:blur(12px)!important;border-bottom:1px solid rgba(255,255,255,.16)!important;
+    flex-wrap:nowrap!important;
+  }
+  header.hero-header.satorq-reference-header{position:absolute!important}
+  header.hero-header.satorq-reference-header .logo,
+  header.satorq-unified-header .satorq-unified-logo,
+  header.site-header .logo{
+    grid-column:1!important;grid-row:1!important;display:block!important;min-width:0!important;
+    margin:0!important;white-space:nowrap!important;font-size:clamp(16px,1.45vw,21px)!important;
+    line-height:1!important;letter-spacing:-.7px!important;
+  }
+  header.hero-header.satorq-reference-header nav#mainNav,
+  header.satorq-unified-header nav.satorq-unified-nav,
+  header.site-header nav.nav{
+    grid-column:2!important;grid-row:1!important;display:flex!important;flex-wrap:nowrap!important;
+    align-items:center!important;justify-content:center!important;min-width:0!important;width:100%!important;
+    max-width:100%!important;overflow:hidden!important;white-space:nowrap!important;
+    gap:clamp(5px,.62vw,9px)!important;padding:0!important;margin:0!important;
+  }
+  header.hero-header.satorq-reference-header nav#mainNav>a,
+  header.satorq-unified-header nav.satorq-unified-nav>a,
+  header.site-header nav.nav>a{
+    flex:0 1 auto!important;min-width:0!important;white-space:nowrap!important;
+    font-size:clamp(6.5px,.62vw,9px)!important;line-height:1.2!important;
+    letter-spacing:clamp(0px,.035vw,.5px)!important;padding:8px 0!important;margin:0!important;
+  }
+  header.hero-header.satorq-reference-header .header-tools,
+  header.satorq-unified-header .satorq-unified-tools,
+  header.site-header .tools{
+    grid-column:3!important;grid-row:1!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;min-width:0!important;gap:clamp(4px,.5vw,8px)!important;
+    margin:0!important;padding:0!important;white-space:nowrap!important;flex-wrap:nowrap!important;
+  }
+  header.hero-header.satorq-reference-header .header-tools .flag,
+  header.satorq-unified-header .satorq-unified-tools span,
+  header.site-header .tools .flags{font-size:clamp(11px,1vw,15px)!important;line-height:1!important}
+  header.hero-header.satorq-reference-header .wa-top,
+  header.satorq-unified-header .satorq-wa,
+  header.site-header .tools .wa{flex:0 0 23px!important;width:23px!important;height:23px!important}
+  header.hero-header.satorq-reference-header .search-icon,
+  header.satorq-unified-header .satorq-search,
+  header.site-header .tools .search{flex:0 0 20px!important;width:20px!important;height:24px!important}
+  header.hero-header.satorq-reference-header .search-panel,
+  header.hero-header.satorq-reference-header .search-results{z-index:100000!important}
+}
+@media (min-width:901px) and (max-width:1100px){
+  header.hero-header.satorq-reference-header,
+  header.satorq-unified-header,
+  header.site-header{
+    grid-template-columns:100px minmax(0,1fr) 76px!important;gap:5px!important;padding:0 10px!important;
+  }
+  header.hero-header.satorq-reference-header nav#mainNav,
+  header.satorq-unified-header nav.satorq-unified-nav,
+  header.site-header nav.nav{gap:5px!important}
+  header.hero-header.satorq-reference-header nav#mainNav>a,
+  header.satorq-unified-header nav.satorq-unified-nav>a,
+  header.site-header nav.nav>a{font-size:6.5px!important;letter-spacing:0!important}
+}
+</style>
+
 </body>
 </html>
