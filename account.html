@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050505">
+<title>Customer Account | SA.TORQ</title><meta name="description" content="Create your SA.TORQ customer account or sign in securely.">
+<link rel="icon" href="assets/sa-torq-logo.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v=20261015-accounts">
+<style>
+:root{color-scheme:dark;--account-red:#e10600}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;min-height:100vh;background:#050505;color:#f2f2f2;font-family:Arial,Helvetica,sans-serif}
+.account-top{display:flex;align-items:center;justify-content:space-between;padding:22px 5%;border-bottom:1px solid #242424;background:rgba(8,8,8,.96)}
+.account-brand{font-size:21px;font-weight:900;letter-spacing:-.8px}.account-brand span{color:var(--account-red)}.account-top a:last-child{font-size:10px;letter-spacing:1px;color:#bbb}
+.account-layout{min-height:calc(100vh - 72px);display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,480px);gap:6%;align-items:center;width:min(1180px,90%);margin:auto;padding:60px 0;position:relative;isolation:isolate}.account-layout:before{content:'';position:absolute;inset:0 calc((min(1180px,90vw) - 100vw)/2);z-index:-1;background:linear-gradient(90deg,rgba(3,3,3,.30),rgba(3,3,3,.36) 44%,rgba(3,3,3,.72)),url('assets/hero-background.jpg?v=20261015-account-background') center/cover no-repeat;}
+.account-intro small{color:#ddd;font-size:10px;font-weight:800;letter-spacing:3px}.account-intro h1{font-size:clamp(44px,7vw,84px);line-height:.9;letter-spacing:-3px;margin:18px 0}.account-intro h1 span{color:var(--account-red)}.account-intro p{max-width:450px;color:#ddd;font-size:13px;line-height:1.8}
+.account-card{border:1px solid rgba(255,255,255,.18);background:rgba(8,8,8,.88);backdrop-filter:blur(7px);padding:clamp(22px,4vw,38px);box-shadow:0 22px 80px rgba(0,0,0,.45)}
+.tabs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #2a2a2a;margin-bottom:24px}.tabs button{border:0;border-bottom:2px solid transparent;background:transparent;color:#888;padding:13px 5px;font-size:10px;font-weight:800;letter-spacing:1.2px;cursor:pointer}.tabs button[aria-selected="true"]{color:#fff;border-bottom-color:var(--account-red)}
+.form-title{font-size:25px;margin:0 0 8px}.form-subtitle{color:#888;font-size:11px;line-height:1.7;margin:0 0 23px}.field{display:block;margin:15px 0}.field span{display:block;color:#aaa;font-size:10px;letter-spacing:1px;margin-bottom:8px}.field input{width:100%;border:1px solid #333;background:#080808;color:#fff;padding:13px 12px;font:inherit;font-size:13px;outline:none}.field input:focus{border-color:var(--account-red)}
+.form-actions{display:flex;justify-content:flex-end;margin:2px 0 18px}.text-button{border:0;background:none;color:#aaa;font-size:10px;text-decoration:underline;cursor:pointer;padding:0}
+.primary{width:100%;border:0;background:var(--account-red);color:#fff;padding:14px 16px;font-size:10px;font-weight:900;letter-spacing:1.4px;cursor:pointer}.primary:disabled{opacity:.55;cursor:wait}
+.status{display:none;margin:16px 0 0;padding:12px;border:1px solid #333;background:#0a0a0a;color:#ccc;font-size:11px;line-height:1.6;overflow-wrap:anywhere}.status.show{display:block}.status.error{border-color:#76201d;color:#ffb6b3}.status.success{border-color:#28583b;color:#b8f1cb}
+.small-print{color:#666;font-size:9px;line-height:1.7;margin:18px 0 0}#profile-panel{display:none}.guest-link{display:block;text-align:center;margin-top:22px;color:#aaa;font-size:10px;letter-spacing:.8px}.guest-link:hover,.account-top a:hover{color:#fff}
+@media(max-width:760px){.account-layout{grid-template-columns:1fr;gap:28px;padding:38px 0}.account-intro h1{font-size:54px}.account-intro p{font-size:12px}.account-card{padding:23px}.account-top{padding:18px 5%}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="auth-config.js"></script>
+</head>
+<body>
+<header class="account-top"><a class="account-brand" href="index.html" aria-label="SA.TORQ home">SA.<span>TORQ</span></a><a href="index.html">← BACK TO WEBSITE</a></header>
+<main class="account-layout">
+<section class="account-intro"><small>THE SA.TORQ RIDER NETWORK</small><h1>YOUR RIDE.<br><span>OUR PASSION.</span></h1><p>All you need for riders and bikes.<br>Models. Parts. Training. Service. Performance Tuning.<br>A stronger rider community in Egypt and beyond.</p></section>
+<section class="account-card" aria-label="Customer account">
+<div id="auth-panel">
+<div class="tabs" role="tablist" aria-label="Account options"><button type="button" id="login-tab" role="tab" aria-selected="true">LOGIN</button><button type="button" id="signup-tab" role="tab" aria-selected="false">SIGN UP</button></div>
+<h2 class="form-title" id="form-title">Welcome back.</h2><p class="form-subtitle" id="form-subtitle">Sign in with your email and password.</p>
+<form id="auth-form">
+<label class="field" id="name-wrap" hidden><span>FULL NAME</span><input id="full-name" name="name" autocomplete="name" maxlength="100" placeholder="Your name"></label>
+<label class="field"><span>EMAIL ADDRESS</span><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></label>
+<label class="field" id="password-wrap"><span>PASSWORD</span><input id="password" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters"></label>
+<div class="form-actions" id="forgot-wrap"><button class="text-button" type="button" id="forgot-button">Forgot password?</button></div>
+<button class="primary" id="submit-button" type="submit">LOGIN TO YOUR ACCOUNT</button></form>
+<div class="status" id="status" role="status" aria-live="polite"></div><p class="small-print" id="small-print">By continuing, you agree to SA.TORQ’s applicable terms and privacy policy.</p><a class="guest-link" href="index.html">CONTINUE BROWSING AS GUEST ↗</a>
+</div>
+<div id="profile-panel"><small style="color:#e10600;letter-spacing:2px;font-weight:800">ACCOUNT STATUS</small><h2 class="form-title">Welcome, <span id="profile-name">Rider</span>.</h2><p class="form-subtitle" id="profile-email"></p><div class="status show success">Your SA.TORQ account is active. Order history and loyalty features can be connected in a future step.</div><button class="primary" type="button" id="logout-button" style="margin-top:22px">LOG OUT</button><a class="guest-link" href="index.html">RETURN TO SA.TORQ ↗</a></div>
+</section></main>
+<script>
+(function(){
+ const cfgUrl=window.SATORQ_SUPABASE_URL,cfgKey=window.SATORQ_SUPABASE_ANON_KEY;
+ const configured=!!(window.supabase&&cfgUrl&&cfgKey&&!cfgUrl.includes("YOUR-PROJECT-REF")&&!cfgKey.includes("YOUR_SUPABASE"));
+ const authPanel=document.getElementById('auth-panel'),profilePanel=document.getElementById('profile-panel'),form=document.getElementById('auth-form'),statusBox=document.getElementById('status');
+ const loginTab=document.getElementById('login-tab'),signupTab=document.getElementById('signup-tab'),nameWrap=document.getElementById('name-wrap'),password=document.getElementById('password'),email=document.getElementById('email');
+ let mode=new URLSearchParams(location.search).get('mode')==='reset'?'reset':'login',client=null;
+ function message(text,type){statusBox.textContent=text;statusBox.className='status show '+(type||'');}
+ function setMode(next){mode=next;const signup=mode==='signup',reset=mode==='reset',login=mode==='login';loginTab.setAttribute('aria-selected',String(login));signupTab.setAttribute('aria-selected',String(signup));document.getElementById('form-title').textContent=signup?'Join the network.':reset?'Set a new password.':'Welcome back.';document.getElementById('form-subtitle').textContent=signup?'Create your SA.TORQ account with your email.':reset?'Choose a new password for your account.':'Sign in with your email and password.';nameWrap.hidden=!signup;document.getElementById('full-name').required=signup;document.getElementById('forgot-wrap').hidden=!login;document.getElementById('submit-button').textContent=signup?'CREATE ACCOUNT':reset?'SAVE NEW PASSWORD':'LOGIN TO YOUR ACCOUNT';password.autocomplete=signup||reset?'new-password':'current-password';loginTab.style.display=reset?'none':'';signupTab.style.display=reset?'none':'';statusBox.className='status';form.reset();if(!configured)message('Account setup is not connected yet. Supabase project URL and publishable/anon key must be added to auth-config.js before sign-up or login can work.','error');}
+ async function submit(e){e.preventDefault();if(!configured){message('Setup required: connect this page to your Supabase project first. No account was created and no password was sent.','error');return;}const button=document.getElementById('submit-button');button.disabled=true;try{const mail=email.value.trim(),pass=password.value;if(mode==='signup'){const name=document.getElementById('full-name').value.trim();const {data,error}=await client.auth.signUp({email:mail,password:pass,options:{data:{full_name:name},emailRedirectTo:location.origin+location.pathname}});if(error)throw error;if(data.session){message('Account created successfully. Redirecting to SA.TORQ…','success');window.location.assign('index.html');return;}message('Account created. Check your inbox to confirm your email before logging in.','success');}else if(mode==='login'){const {data,error}=await client.auth.signInWithPassword({email:mail,password:pass});if(error)throw error;message('Login successful. Redirecting to SA.TORQ…','success');window.location.assign('index.html');return;}else{const {error}=await client.auth.updateUser({password:pass});if(error)throw error;message('Password updated successfully.','success');history.replaceState(null,'',location.pathname);setMode('login');}}catch(err){message(err.message||'Something went wrong. Please try again.','error');}finally{button.disabled=false;}}
+ loginTab.addEventListener('click',()=>setMode('login'));signupTab.addEventListener('click',()=>setMode('signup'));form.addEventListener('submit',submit);
+ document.getElementById('forgot-button').addEventListener('click',async()=>{if(!configured){message('Password reset becomes available after Supabase is connected.','error');return;}if(!email.value.trim()){message('Enter your email address first.','error');email.focus();return;}try{const {error}=await client.auth.resetPasswordForEmail(email.value.trim(),{redirectTo:location.origin+location.pathname+'?mode=reset'});if(error)throw error;message('If an account exists for that address, password-reset instructions will be sent. Check your inbox.','success');}catch(err){message(err.message||'Could not request a password reset.','error');}});
+ document.getElementById('logout-button').addEventListener('click',async()=>{if(client){const {error}=await client.auth.signOut();if(error)message(error.message,'error');}});
+ async function renderSession(session){if(session){authPanel.style.display='none';profilePanel.style.display='block';const userName=(session.user.user_metadata&&session.user.user_metadata.full_name)||((session.user.email||'').split('@')[0])||'Rider';document.getElementById('profile-name').textContent=userName;document.getElementById('profile-email').textContent=session.user.email||'Signed-in customer';}else{profilePanel.style.display='none';authPanel.style.display='block';}}
+ if(configured){client=window.supabase.createClient(cfgUrl,cfgKey);client.auth.onAuthStateChange((_event,session)=>{renderSession(session);});client.auth.getSession().then(({data})=>renderSession(data.session));}
+ setMode(mode);if(!configured){document.getElementById('submit-button').disabled=true;document.getElementById('forgot-button').disabled=true;}
+})();
+</script></body></html>
