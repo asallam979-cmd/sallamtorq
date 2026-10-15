@@ -317,54 +317,59 @@
 </body></html>
 
 <style id="satorq-discover-icon-and-stable-laptop-header">
-/* Keep the laptop header in one consistent row; do not alter the mobile header. */
+/* Desktop: preserve the same compact, single-row navigation at every laptop width. */
 @media (min-width:901px){
   header.hero-header.satorq-reference-header{
-    height:70px!important;min-height:70px!important;max-height:70px!important;
-    flex-wrap:nowrap!important;align-items:center!important;
-    padding:0 4.2%!important;gap:clamp(12px,1.8vw,28px)!important;
+    display:grid!important;grid-template-columns:clamp(128px,13vw,180px) minmax(0,1fr) clamp(112px,13vw,170px)!important;
+    width:100%!important;height:70px!important;min-height:70px!important;max-height:70px!important;
+    flex-wrap:initial!important;align-items:center!important;gap:clamp(8px,1vw,16px)!important;
+    padding:0 clamp(16px,3.4vw,52px)!important;box-sizing:border-box!important;
   }
-  header.hero-header.satorq-reference-header .logo{flex:0 0 auto!important;white-space:nowrap!important}
+  header.hero-header.satorq-reference-header .logo{min-width:0!important;white-space:nowrap!important;font-size:clamp(17px,1.55vw,22px)!important}
   header.hero-header.satorq-reference-header nav#mainNav{
-    order:initial!important;flex:1 1 auto!important;flex-basis:auto!important;
-    min-width:0!important;overflow:visible!important;flex-wrap:nowrap!important;
-    justify-content:center!important;gap:clamp(7px,1.05vw,15px)!important;
+    grid-column:2!important;grid-row:1!important;display:flex!important;flex-wrap:nowrap!important;
+    min-width:0!important;width:100%!important;overflow:hidden!important;align-items:center!important;
+    justify-content:center!important;gap:clamp(5px,.72vw,11px)!important;
   }
   header.hero-header.satorq-reference-header nav#mainNav>a{
-    flex:0 0 auto!important;font-size:clamp(7px,.68vw,10px)!important;
-    letter-spacing:clamp(.35px,.08vw,1px)!important;white-space:nowrap!important;
+    flex:0 1 auto!important;min-width:0!important;white-space:nowrap!important;
+    font-size:clamp(7px,.66vw,9px)!important;letter-spacing:clamp(.2px,.045vw,.65px)!important;
   }
-  header.hero-header.satorq-reference-header .header-tools{flex:0 0 auto!important;white-space:nowrap!important}
+  header.hero-header.satorq-reference-header .header-tools{
+    grid-column:3!important;grid-row:1!important;display:flex!important;min-width:0!important;
+    align-items:center!important;justify-content:flex-end!important;gap:clamp(5px,.55vw,9px)!important;
+    white-space:nowrap!important;
+  }
 }
-/* Replace the Discover wording with one small clickable down-arrow; it scrolls to the Worlds hub. */
-#home.satorq-master-home .master-center{
-  display:block!important;position:absolute!important;left:0!important;right:0!important;
-  bottom:34px!important;width:100%!important;max-width:none!important;margin:0!important;
-  padding:0!important;text-align:center!important;z-index:8!important;pointer-events:none!important;
-}
-#home.satorq-master-home .master-center .master-logo,
-#home.satorq-master-home .master-center .master-tagline,
-#home.satorq-master-home .master-center .master-sub{display:none!important}
-#home.satorq-master-home .master-center .discover-world-link{
-  pointer-events:auto!important;display:inline-flex!important;align-items:center!important;
-  justify-content:center!important;width:28px!important;height:28px!important;
-  margin:0!important;padding:0!important;border:0!important;background:transparent!important;
-  font-size:0!important;letter-spacing:0!important;gap:0!important;color:transparent!important;
-}
-#home.satorq-master-home .master-center .discover-world-link .discover-world-icon{
-  display:flex!important;align-items:center!important;justify-content:center!important;
-  width:22px!important;height:22px!important;color:#e10600!important;font-size:0!important;
-}
-#home.satorq-master-home .master-center .discover-world-link .discover-world-icon svg{
-  display:block!important;width:18px!important;height:18px!important;fill:none!important;
-  stroke:#e10600!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important;
-}
-#home.satorq-master-home .master-center .discover-world-link:hover{gap:0!important;transform:translateY(2px)!important}
-#home.satorq-master-home .master-worlds:after{display:none!important;content:none!important}
-@media(max-width:600px){
-  #home.satorq-master-home .master-center{bottom:34px!important}
-  #home.satorq-master-home .master-center .discover-world-link{width:24px!important;height:24px!important}
-  #home.satorq-master-home .master-center .discover-world-link .discover-world-icon{width:18px!important;height:18px!important}
-  #home.satorq-master-home .master-center .discover-world-link .discover-world-icon svg{width:16px!important;height:16px!important}
+/* Desktop hero: the Discover action itself becomes the small, clickable arrow. */
+@media (min-width:901px){
+  #home.satorq-master-home .master-center{
+    display:block!important;position:absolute!important;left:0!important;right:0!important;
+    bottom:34px!important;width:100%!important;max-width:none!important;margin:0!important;
+    padding:0!important;text-align:center!important;z-index:8!important;pointer-events:none!important;
+  }
+  #home.satorq-master-home .master-center .master-logo,
+  #home.satorq-master-home .master-center .master-tagline,
+  #home.satorq-master-home .master-center .master-sub{display:none!important}
+  #home.satorq-master-home .master-center .discover-world-link{
+    pointer-events:auto!important;display:inline-flex!important;align-items:center!important;
+    justify-content:center!important;width:30px!important;height:30px!important;
+    margin:0!important;padding:0!important;border:1px solid rgba(225,6,0,.75)!important;
+    border-radius:50%!important;background:rgba(0,0,0,.28)!important;
+    font-size:0!important;letter-spacing:0!important;gap:0!important;color:transparent!important;
+    transition:transform .2s ease,background .2s ease,border-color .2s ease!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link .discover-world-icon{
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    width:22px!important;height:22px!important;color:#e10600!important;font-size:0!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link .discover-world-icon svg{
+    display:block!important;width:17px!important;height:17px!important;fill:none!important;
+    stroke:#e10600!important;stroke-width:1.7!important;stroke-linecap:round!important;stroke-linejoin:round!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link:hover{
+    gap:0!important;transform:translateY(3px)!important;background:rgba(225,6,0,.12)!important;border-color:#e10600!important;
+  }
+  #home.satorq-master-home .master-worlds:after{display:none!important;content:none!important}
 }
 </style>
