@@ -401,6 +401,47 @@
   }
 }
 </style>
+<style id="satorq-remove-misplaced-discover-icon">
+/* Correct hero composition: keep the Discover label and its arrow, remove the three card prompts. */
+@media (min-width:901px){
+  #home.satorq-master-home .master-worlds{
+    display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    height:112px!important;bottom:0!important;
+  }
+  #home.satorq-master-home .master-worlds .world-card.world-service{display:none!important}
+  #home.satorq-master-home .master-worlds .world-card span{display:none!important}
+  #home.satorq-master-home .master-worlds .world-card{
+    display:flex!important;justify-content:flex-end!important;align-items:center!important;
+    padding:0 10px 22px!important;text-align:center!important;
+  }
+  #home.satorq-master-home .master-center{
+    display:block!important;position:absolute!important;left:0!important;right:0!important;
+    bottom:116px!important;width:100%!important;max-width:none!important;margin:0!important;
+    padding:0!important;text-align:center!important;z-index:8!important;pointer-events:none!important;
+  }
+  #home.satorq-master-home .master-center .master-logo,
+  #home.satorq-master-home .master-center .master-tagline,
+  #home.satorq-master-home .master-center .master-sub{display:none!important}
+  #home.satorq-master-home .master-center .discover-world-link{
+    display:inline-flex!important;visibility:visible!important;pointer-events:auto!important;
+    align-items:center!important;justify-content:center!important;gap:9px!important;
+    width:auto!important;height:auto!important;margin:0!important;padding:7px 12px!important;
+    border:0!important;border-bottom:1px solid rgba(225,6,0,.8)!important;border-radius:0!important;
+    background:transparent!important;color:#fff!important;font-size:9px!important;
+    font-weight:800!important;letter-spacing:1.8px!important;text-decoration:none!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link .discover-world-icon{
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
+    width:18px!important;height:18px!important;color:#e10600!important;font-size:16px!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link .discover-world-icon svg{
+    display:block!important;width:17px!important;height:17px!important;fill:none!important;
+    stroke:#e10600!important;stroke-width:1.7!important;stroke-linecap:round!important;stroke-linejoin:round!important;
+  }
+  #home.satorq-master-home .master-center .discover-world-link:hover{gap:12px!important;color:#e10600!important}
+  #home.satorq-master-home .master-worlds:after{display:none!important;content:none!important}
+}
+</style>
 </body></html>
 
 <style id="satorq-discover-icon-and-stable-laptop-header">
