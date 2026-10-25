@@ -1,0 +1,68 @@
+/* Mobile home only — one isolated system. Desktop remains governed by the original styles. */
+.mobile-home-header,.mobile-shortcuts,.mobile-panel,.mobile-scrim,.mobile-hero-copy,.mobile-hero-background{display:none!important}
+
+@media (max-width:600px){
+  html,body{width:100%;max-width:100%;overflow-x:clip!important}
+  body.mobile-menu-open{overflow:hidden!important}
+  header.hero-header{display:none!important}
+
+  .mobile-home-header{position:absolute!important;top:0;left:0;right:0;height:76px;padding:10px 18px;display:grid!important;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;z-index:10001;background:linear-gradient(180deg,rgba(3,5,7,.94),rgba(3,5,7,.56),transparent)!important}
+  .mobile-icon-button{width:44px;height:44px;display:grid;place-content:center;gap:5px;padding:0;border:0;background:transparent;color:#fff;cursor:pointer}
+  .mobile-icon-button span{display:block;width:24px;height:2px;background:#fff;border-radius:3px}
+  .mobile-search-button{justify-self:end;display:grid;place-items:center!important}
+  .mobile-search-button svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+  .mobile-brand{display:flex!important;min-width:0;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;text-decoration:none!important;line-height:1}
+  .mobile-brand strong{font-size:27px;letter-spacing:-2px;font-style:italic;white-space:nowrap}
+  .mobile-brand strong b{color:#e30613;font-style:italic}
+  .mobile-brand small{margin-top:4px;color:#f4f4f4;font-size:6px;font-weight:800;letter-spacing:3px;white-space:nowrap}
+
+  .mobile-shortcuts{position:absolute!important;left:15px;right:15px;top:76px;z-index:10002;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:0!important;background:transparent!important}
+  .mobile-shortcuts button{min-width:0;height:38px;display:flex;align-items:center;justify-content:space-between;gap:3px;padding:0 9px;border:1px solid rgba(255,255,255,.28);border-radius:2px;background:rgba(5,7,9,.62);box-shadow:0 9px 22px rgba(0,0,0,.18);color:#fff;font-size:8px;font-weight:800;letter-spacing:.7px;text-align:left;white-space:nowrap;cursor:pointer}
+  .mobile-shortcuts button span{color:#e30613;font-size:16px;font-weight:400;line-height:1}
+  .mobile-shortcuts button[aria-expanded="true"]{border-color:#e30613;background:rgba(18,16,16,.96)}
+  .mobile-shortcuts button[aria-expanded="true"] span{transform:rotate(45deg)}
+
+  .mobile-panel{position:fixed!important;inset:0 auto 0 0;width:min(88vw,370px);display:block!important;transform:translateX(-105%);visibility:hidden;z-index:20001;background:#0b0d0f;color:#fff;box-shadow:20px 0 60px rgba(0,0,0,.55);transition:transform .26s ease,visibility .26s ease;overflow-y:auto}
+  .mobile-panel.is-open{transform:translateX(0);visibility:visible}
+  .mobile-panel-top{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid rgba(255,255,255,.12);font-size:15px;font-weight:900;letter-spacing:-.6px}
+  .mobile-panel-top span::first-letter{color:#e30613}
+  .mobile-panel-top button{width:42px;height:42px;border:0;background:transparent;color:#fff;font-size:34px;font-weight:200;cursor:pointer}
+  .mobile-panel-content{padding:14px 20px 36px}
+  .mobile-panel-heading{display:block;margin:13px 0 7px;color:#f23b44;font-size:9px;font-weight:800;letter-spacing:1.9px}
+  .mobile-panel-content a{display:flex;align-items:center;justify-content:space-between;min-height:49px;border-bottom:1px solid rgba(255,255,255,.10);color:#f6f6f6;font-size:14px;font-weight:700;text-decoration:none}
+  .mobile-panel-content a::after{content:'↗';color:#e30613;font-size:17px;font-weight:400}
+  .mobile-panel-content .mobile-search-form{display:flex;gap:8px;margin:3px 0 19px}
+  .mobile-search-form input{min-width:0;flex:1;height:44px;border:1px solid rgba(255,255,255,.25);border-radius:0;background:#15191c;color:#fff;padding:0 11px;font-size:13px}
+  .mobile-search-form button{height:44px;border:0;background:#e30613;color:#fff;padding:0 14px;font-size:10px;font-weight:800;letter-spacing:.8px}
+  .mobile-scrim{position:fixed!important;inset:0;z-index:20000;background:rgba(0,0,0,.63);opacity:0;pointer-events:none;transition:opacity .26s ease}
+  .mobile-scrim.is-open{display:block!important;opacity:1;pointer-events:auto}
+
+  #home.satorq-master-home{position:relative!important;display:block!important;width:100%!important;height:100svh!important;min-height:680px!important;max-height:none!important;overflow:hidden!important;padding:0!important;background-color:#08090a!important;background-image:linear-gradient(180deg,rgba(0,0,0,.14) 0%,rgba(0,0,0,.03) 43%,rgba(0,0,0,.92) 100%),url('assets/hero-background-mobile-egypt-italy.png')!important;background-repeat:no-repeat!important;background-size:cover!important;background-position:center center!important}
+  #home.satorq-master-home::before,#home.satorq-master-home::after{display:none!important;content:none!important}
+  #home.satorq-master-home .master-center,#home.satorq-master-home .master-location,#home.satorq-master-home .master-worlds{display:none!important}
+  .mobile-hero-copy{position:absolute!important;left:0;right:0;bottom:0;display:block!important;z-index:4;padding:0 25px max(30px,env(safe-area-inset-bottom));color:#fff;text-align:left}
+  .mobile-kicker{display:flex;align-items:center;gap:11px;margin-bottom:14px;color:#f4f4f4;font-size:10px;font-weight:800;letter-spacing:2.5px}
+  .mobile-kicker::before{content:'';display:block;width:42px;height:1px;background:#fff}
+  .mobile-hero-copy h1{margin:0;color:#fff;font-size:clamp(41px,12.4vw,56px)!important;font-weight:900!important;letter-spacing:-2.2px!important;line-height:.88!important;text-shadow:0 3px 19px rgba(0,0,0,.48)!important}
+  .mobile-hero-copy h1 em{color:#e33a41!important;font-style:normal}
+  .mobile-hero-copy p{max-width:330px;margin:17px 0 0;color:#e1e1e1;font-size:13px!important;line-height:1.55!important;text-shadow:0 2px 12px #000!important}
+  .mobile-tricolor{display:none!important}
+}
+
+@media (max-width:370px){
+  .mobile-shortcuts{left:10px;right:10px;gap:5px}
+  .mobile-shortcuts button{padding:0 6px;font-size:7px;letter-spacing:.35px}
+}
+
+/* Final specificity guard: old homepage experiments use highly-specific selectors. */
+@media (max-width:600px){
+  header.hero-header.satorq-reference-header{display:none!important}
+  #home.satorq-master-home .mobile-hero-copy{position:absolute!important;top:auto!important;right:0!important;bottom:0!important;left:0!important;display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0 25px max(30px,env(safe-area-inset-bottom))!important;text-align:left!important;z-index:1000!important;visibility:visible!important;opacity:1!important;transform:none!important}
+  #home.satorq-master-home .mobile-hero-copy .mobile-kicker{display:flex!important}
+  #home.satorq-master-home .mobile-hero-copy h1{display:block!important;margin:0!important}
+  #home.satorq-master-home .mobile-hero-copy p{display:block!important}
+  #home.satorq-master-home .mobile-hero-copy .mobile-tricolor{display:none!important}
+  #home.satorq-master-home .master-center,#home.satorq-master-home .master-location,#home.satorq-master-home .master-worlds{display:none!important;visibility:hidden!important}
+  .mobile-panel{position:fixed!important;top:76px!important;right:auto!important;bottom:0!important;left:0!important;height:auto!important;max-height:none!important;inset-inline-start:0!important}
+  .mobile-panel-top{display:flex!important}
+}
