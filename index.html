@@ -458,14 +458,18 @@
   header.hero-header.satorq-reference-header,
   header.satorq-unified-header,
   header.site-header{
-    grid-template-columns:100px minmax(0,1fr) 76px!important;gap:5px!important;padding:0 10px!important;
+    grid-template-columns:122px minmax(0,1fr) 190px!important;gap:7px!important;padding:0 12px!important;
   }
   header.hero-header.satorq-reference-header nav#mainNav,
   header.satorq-unified-header nav.satorq-unified-nav,
-  header.site-header nav.nav{gap:5px!important}
+  header.site-header nav.nav{gap:5px!important;justify-content:flex-start!important;overflow:hidden!important}
   header.hero-header.satorq-reference-header nav#mainNav>a,
   header.satorq-unified-header nav.satorq-unified-nav>a,
   header.site-header nav.nav>a{font-size:6.5px!important;letter-spacing:0!important}
+  header.hero-header.satorq-reference-header .header-tools{gap:4px!important;overflow:hidden!important}
+  header.hero-header.satorq-reference-header .header-tools .flag,
+  header.hero-header.satorq-reference-header .header-tools .tool-sep{display:none!important}
+  header.hero-header.satorq-reference-header .header-tools .account-link{padding:8px 7px!important;font-size:7px!important;letter-spacing:.35px!important}
 }
 </style>
 
@@ -730,7 +734,7 @@
 /* Laptop navigation: stable single-row header without changing the mobile layout. */
 @media (min-width:901px){
   header.hero-header.satorq-reference-header{
-    display:grid!important;grid-template-columns:clamp(128px,13vw,180px) minmax(0,1fr) clamp(112px,13vw,170px)!important;
+    display:grid!important;grid-template-columns:clamp(128px,13vw,180px) minmax(0,1fr) clamp(190px,19vw,255px)!important;
     width:100%!important;height:70px!important;min-height:70px!important;max-height:70px!important;
     padding:0 clamp(16px,3.4vw,52px)!important;gap:clamp(8px,1vw,16px)!important;
     align-items:center!important;box-sizing:border-box!important;
@@ -748,7 +752,7 @@
   header.hero-header.satorq-reference-header .header-tools{
     grid-column:3!important;grid-row:1!important;display:flex!important;min-width:0!important;
     justify-content:flex-end!important;align-items:center!important;gap:clamp(5px,.55vw,9px)!important;
-    white-space:nowrap!important;
+    max-width:100%!important;overflow:hidden!important;white-space:nowrap!important;flex-wrap:nowrap!important;
   }
 
   /* Keep the three main Worlds visible along the bottom of the hero. */
