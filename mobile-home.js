@@ -68,6 +68,7 @@
 
   function allMenuMarkup() {
     return [
+      ['SIGN UP / LOGIN', 'account.html'],
       ['MODELS', 'models-catalog.html'],
       ['MOTOVANS', 'motovans.html'],
       ['MOTO GEAR', 'moto-gear.html'],
@@ -97,6 +98,9 @@
   openButton?.addEventListener('click', () => openPanel(allMenuMarkup()));
   searchButton?.addEventListener('click', () => openPanel(searchMarkup()));
   closeButtons.forEach(button => button.addEventListener('click', closePanel));
+  content.addEventListener('click', event => {
+    if (event.target.closest('a[href]')) closePanel();
+  });
 
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') closePanel();

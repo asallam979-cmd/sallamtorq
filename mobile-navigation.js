@@ -25,8 +25,8 @@
       .satorq-mobile-drawer.is-open{transform:translateX(0)!important;visibility:visible!important}
       .satorq-mobile-drawer-head{position:sticky!important;top:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;height:72px!important;margin:0 -20px 12px!important;padding:0 20px!important;background:#0b0d0f!important;border-bottom:1px solid #292929!important;font-weight:900!important;letter-spacing:.3px!important}
       .satorq-mobile-drawer-head button{width:40px!important;height:40px!important;border:0!important;background:transparent!important;color:#fff!important;font-size:30px!important}
-      .satorq-mobile-drawer a{display:flex!important;align-items:center!important;justify-content:space-between!important;min-height:49px!important;border-bottom:1px solid rgba(255,255,255,.1)!important;color:#f4f4f4!important;text-decoration:none!important;font-size:13px!important;font-weight:750!important;letter-spacing:.45px!important;text-transform:uppercase!important}
-      .satorq-mobile-drawer a:after{content:''!important;display:block!important;width:9px!important;height:9px!important;flex:0 0 9px!important;border-top:2px solid #e10613!important;border-right:2px solid #e10613!important;transform:rotate(45deg)!important}
+      .satorq-mobile-drawer a{position:relative!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;min-height:49px!important;padding-right:30px!important;border-bottom:1px solid rgba(255,255,255,.1)!important;color:#f4f4f4!important;text-decoration:none!important;font-size:13px!important;font-weight:750!important;letter-spacing:.45px!important;text-transform:uppercase!important}
+      .satorq-mobile-drawer a:after{content:''!important;position:absolute!important;top:50%!important;right:8px!important;display:block!important;width:9px!important;height:9px!important;border-top:2px solid #e10613!important;border-right:2px solid #e10613!important;transform:translateY(-50%) rotate(45deg)!important}
       body.satorq-mobile-menu-open{overflow:hidden!important}
     }
   `;
@@ -54,6 +54,7 @@
   drawer.append(top);
   [
     ['HOME', 'index.html'],
+    ['SIGN UP / LOGIN', 'account.html'],
     ['MODELS', 'models-catalog.html'],
     ['MOTOVANS', 'motovans.html'],
     ['MOTO GEAR', 'moto-gear.html'],
