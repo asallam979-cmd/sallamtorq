@@ -10,12 +10,14 @@
     .satorq-mobile-menu-button,.satorq-mobile-scrim,.satorq-mobile-drawer{display:none!important}
     @media(max-width:600px){
       body{overflow-x:hidden}
-      .satorq-mobile-nav-host{position:sticky!important;top:0!important;z-index:10000!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;width:100%!important;min-height:72px!important;height:auto!important;padding:10px 16px!important;background:rgba(5,7,9,.97)!important;border-bottom:1px solid rgba(255,255,255,.14)!important;box-sizing:border-box!important;backdrop-filter:blur(14px)}
+      .satorq-mobile-nav-host{position:sticky!important;top:0!important;z-index:10000!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:9px!important;width:100%!important;min-height:60px!important;height:60px!important;padding:7px 12px!important;background:rgba(5,7,9,.97)!important;border-bottom:1px solid rgba(255,255,255,.14)!important;box-sizing:border-box!important;backdrop-filter:blur(14px)}
       .satorq-mobile-nav-host>.satorq-mobile-menu-button{order:0!important;flex:0 0 42px!important;width:42px!important;height:42px!important;display:grid!important;align-content:center!important;justify-items:center!important;gap:6px!important;padding:0!important;border:1px solid rgba(255,255,255,.18)!important;border-radius:50%!important;background:rgba(255,255,255,.06)!important;color:#fff!important}
       .satorq-mobile-menu-button i{display:block!important;width:19px!important;height:2px!important;background:#fff!important;border-radius:2px!important}
       .satorq-mobile-nav-host>nav{display:none!important}
       .satorq-mobile-nav-host .satorq-mobile-brand{order:1!important;flex:1 1 auto!important;min-width:0!important;margin:0 auto!important;text-align:center!important;white-space:nowrap!important;overflow:visible!important}
       .satorq-mobile-nav-host>.satorq-unified-tools,.satorq-mobile-nav-host>.tools{order:2!important;flex:0 1 auto!important;min-width:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:7px!important;margin:0!important}
+      .satorq-mobile-nav-host>.sales{order:2!important;flex:0 1 auto!important;min-width:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:4px!important;margin:0!important;white-space:nowrap!important}
+      .satorq-mobile-nav-host>.sales a{padding:7px 6px!important;font-size:7px!important;letter-spacing:.35px!important}
       .satorq-mobile-nav-host>.satorq-cta,.satorq-mobile-nav-host>.cta,.satorq-mobile-nav-host>.st-cta{order:2!important;flex:0 0 auto!important;margin:0!important;padding:9px 10px!important;font-size:8px!important}
       .satorq-mobile-scrim{display:block!important;position:fixed!important;inset:0!important;z-index:10001!important;background:rgba(0,0,0,.62)!important;opacity:0!important;visibility:hidden!important;transition:opacity .22s ease,visibility .22s ease!important}
       .satorq-mobile-scrim.is-open{opacity:1!important;visibility:visible!important}
@@ -51,8 +53,6 @@
   top.innerHTML = '<span>SA.TORQ</span><button type="button" aria-label="Close navigation">×</button>';
   drawer.append(top);
   [
-    ['FAQ', 'faq.html'],
-    ['SOCIAL', 'social.html'],
     ['HOME', 'index.html'],
     ['MODELS', 'models-catalog.html'],
     ['MOTOVANS', 'motovans.html'],
