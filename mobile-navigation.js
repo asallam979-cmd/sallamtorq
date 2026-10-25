@@ -1,10 +1,9 @@
-/* Shared mobile drawer for inner pages. Original desktop navigation is untouched. */
+/* Shared, compact mobile navigation for inner pages. */
 (() => {
   if (document.querySelector('.mobile-home-header')) return;
 
   const header = document.querySelector('header');
-  const nav = header?.querySelector('nav');
-  if (!header || !nav || !nav.querySelector('a[href]')) return;
+  if (!header) return;
 
   const css = document.createElement('style');
   css.textContent = `
@@ -25,7 +24,7 @@
       .satorq-mobile-drawer-head{position:sticky!important;top:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;height:72px!important;margin:0 -20px 12px!important;padding:0 20px!important;background:#0b0d0f!important;border-bottom:1px solid #292929!important;font-weight:900!important;letter-spacing:.3px!important}
       .satorq-mobile-drawer-head button{width:40px!important;height:40px!important;border:0!important;background:transparent!important;color:#fff!important;font-size:30px!important}
       .satorq-mobile-drawer a{display:flex!important;align-items:center!important;justify-content:space-between!important;min-height:49px!important;border-bottom:1px solid rgba(255,255,255,.1)!important;color:#f4f4f4!important;text-decoration:none!important;font-size:13px!important;font-weight:750!important;letter-spacing:.45px!important;text-transform:uppercase!important}
-      .satorq-mobile-drawer a:after{content:'↗';color:#e10613!important;font-size:17px!important;font-weight:400!important}
+      .satorq-mobile-drawer a:after{content:''!important;display:block!important;width:9px!important;height:9px!important;flex:0 0 9px!important;border-top:2px solid #e10613!important;border-right:2px solid #e10613!important;transform:rotate(45deg)!important}
       body.satorq-mobile-menu-open{overflow:hidden!important}
     }
   `;
@@ -51,33 +50,21 @@
   top.className = 'satorq-mobile-drawer-head';
   top.innerHTML = '<span>SA.TORQ</span><button type="button" aria-label="Close navigation">×</button>';
   drawer.append(top);
-  const seen = new Set();
-  nav.querySelectorAll('a[href]').forEach(source => {
-    const href = source.getAttribute('href');
-    const label = source.textContent.trim().replace(/\s+/g, ' ');
-    if (!href || !label || seen.has(`${label}|${href}`)) return;
-    seen.add(`${label}|${href}`);
-    const link = source.cloneNode(true);
-    link.removeAttribute('style');
-    drawer.append(link);
-  });
   [
+    ['FAQ', 'faq.html'],
+    ['SOCIAL', 'social.html'],
+    ['HOME', 'index.html'],
     ['MODELS', 'models-catalog.html'],
     ['MOTOVANS', 'motovans.html'],
     ['MOTO GEAR', 'moto-gear.html'],
-    ['RIDERS', 'index.html#riders'],
+    ['RIDERS', 'riders.html#clans'],
     ['SERVICE', 'service.html'],
     ['PARTS', 'racing-parts.html'],
+    ['TORQ MARKET', 'marketplace.html'],
     ['TRAINING', 'index.html#training'],
     ['PERFORMANCE TUNING', 'performance-tuning.html'],
-    ['EVENTS', 'index.html#events'],
-    ['FAQ', 'index.html#faq'],
-    ['MODELS CATALOG', 'models-catalog-expanded.html'],
-    ['MASTER CATALOG', 'master-catalog.html'],
-    ['EXPANDED MODELS', 'models-expanded.html']
+    ['EVENTS', 'index.html#events']
   ].forEach(([label, href]) => {
-    if (seen.has(`${label}|${href}`)) return;
-    seen.add(`${label}|${href}`);
     const link = document.createElement('a');
     link.href = href;
     link.textContent = label;

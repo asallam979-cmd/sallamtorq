@@ -14,10 +14,7 @@
     models: {
       title: 'MODELS',
       links: [
-        ['MODELS', 'models-catalog.html'],
-        ['MODELS CATALOG', 'models-catalog-expanded.html'],
-        ['MASTER CATALOG', 'master-catalog.html'],
-        ['MODELS', 'models.html']
+        ['EXPLORE THE LINEUP', 'models-catalog.html']
       ]
     },
     parts: {
@@ -35,9 +32,7 @@
         ['MOTO GEAR', 'moto-gear.html'],
         ['RIDERS', 'riders.html#clans'],
         ['TRAINING', '#training'],
-        ['EVENTS', '#events'],
-        ['FAQ', '#faq'],
-        ['SIGN UP / LOGIN', 'account.html']
+        ['EVENTS', '#events']
       ]
     }
   };
@@ -79,11 +74,10 @@
       ['RIDERS', 'riders.html#clans'],
       ['SERVICE', 'service.html'],
       ['PARTS', 'racing-parts.html'],
+      ['TORQ MARKET', 'marketplace.html'],
       ['TRAINING', '#training'],
       ['PERFORMANCE TUNING', 'performance-tuning.html'],
-      ['EVENTS', '#events'],
-      ['FAQ', '#faq'],
-      ['SIGN UP / LOGIN', 'account.html']
+      ['EVENTS', '#events']
     ].map(([label, href]) => `<a href="${href}">${label}</a>`).join('');
   }
 
