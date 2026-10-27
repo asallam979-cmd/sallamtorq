@@ -50,14 +50,15 @@
 <label class="full">YOUR NAME<input name="name" placeholder="Name" required></label>
 <label class="full">CONTACT NUMBER<input name="contact" placeholder="WhatsApp number with country code" required></label>
 <button class="btn primary full" type="submit">SEND PROJECT BRIEF ON WHATSAPP ↗</button>
-<div class="note full">Your details will be prepared as a WhatsApp message so you can review and send them.</div>
+<label class="full"><input type="checkbox" name="consent" required> I agree SA.TORQ may use these details to review my project request and contact me.</label><label aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label><div class="note full" id="buildStatus" aria-live="polite">Your request will be saved for private SA.TORQ follow-up and opened in WhatsApp.</div>
 </form></div></div>
 </section>
 <div class="wrap credits">Visual references: <a href="https://www.promobil.de/neuheiten/motorrad-camper-2020-fiat-ducato-campingbus/" target="_blank" rel="noopener">promobil</a>, <a href="https://rocket-camper.de/rocket-moto.html" target="_blank" rel="noopener">Rocket Camper</a>, <a href="https://combeing.lu/de/24-van-ausbauen-motorrad" target="_blank" rel="noopener">Combeing</a>, and <a href="https://www.autoevolution.com/news/the-multi-use-orion-365-can-easily-transition-from-adventure-van-to-gear-hauling-vehicle-243150.html" target="_blank" rel="noopener">autoevolution</a>. Reference images are illustrative; ownership, availability and build capability must be verified before commercial use.</div>
 </main>
 <footer class="footer"><div class="wrap">SA.TORQ · ALL YOU NEED FOR RIDERS · EGYPT × ITALY</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="crm-config.js"></script><script src="crm-connection.js"></script>
 <script>
-document.getElementById('buildForm').addEventListener('submit',function(e){
+document.getElementById('buildForm').addEventListener('submit',async function(e){
  e.preventDefault();
  const f=new FormData(this);
  const lines=[
@@ -70,7 +71,8 @@ document.getElementById('buildForm').addEventListener('submit',function(e){
  'Name: '+(f.get('name')||'Not specified'),
  'Contact: '+(f.get('contact')||'Not specified')
  ];
- window.open('https://wa.me/201118261116?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+ const message=lines.join('\n');
+ await window.satorqSubmitPublicInquiry({form:this,status:document.getElementById('buildStatus'),kind:'MotoVan project',name:f.get('name'),contact:f.get('contact'),details:message,message,website:f.get('website')});
 });
 </script>
 
